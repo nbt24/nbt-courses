@@ -1,0 +1,2934 @@
+<div id="1752899080728d" data-cat="1" class="is-section is-section-100 is-box" style="background-color: rgb(106, 27, 154);">
+	<div class="is-boxes">
+		<div class="is-box-centered">
+			<div class="is-container container" style="max-width: 1400px;">
+				<div class="row clearfix">
+					<div class="column full"><meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Next Bigg Tech</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <style>
+    /* Reset and base */
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #6a1b9a 0%, #8e24aa 40%, #ce93d8 100%);
+      transition: background 0.8s ease-in-out;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    /* Navbar */
+    nav {
+      background: rgba(106, 27, 154, 0.85);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+      width: 100%;
+      display: flex;
+      align-items: center;
+      padding: 0 32px;
+      min-height: 60px;
+      box-sizing: border-box;
+      font-family: sans-serif;
+      border-bottom: 1px solid #3e0852;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 999;
+      transition: top 0.3s ease;
+    }
+
+    nav.hidden {
+      top: -60px; /* Hide navbar by moving it up */
+    }
+
+    .navbar-left {
+      margin-right: 48px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .navbar-left span:first-child {
+      font-weight: 700;
+      font-size: 1.7rem;
+      color: #ffd600;
+      letter-spacing: 1px;
+    }
+
+    .navbar-left span:last-child {
+      color: #fff;
+      font-size: 0.7rem;
+      letter-spacing: 1px;
+      margin-top: -2px;
+      user-select: none;
+    }
+
+    .navbar-spacer {
+      flex: 1;
+    }
+
+    .navbar-links {
+      display: flex;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .navbar-links a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 500;
+      padding: 0 6px;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+    .navbar-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: #ffd600;
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.3s ease;
+    }
+    .navbar-links a:hover,
+    .navbar-links a:focus {
+      color: #ffd600;
+      outline: none;
+    }
+    .navbar-links a:hover::after,
+    .navbar-links a:focus::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+
+    .navbar-right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .navbar-right span {
+      color: #fff;
+      font-size: 1.45rem;
+      cursor: pointer;
+      animation: float 3.2s ease-in-out infinite;
+      user-select: none;
+      transition: color 0.3s ease;
+    }
+    .navbar-right span:hover,
+    .navbar-right span:focus {
+      color: #ffd600;
+      outline: none;
+    }
+
+    .navbar-login-btn {
+      background: #4265d6;
+      color: #fff;
+      border: none;
+      border-radius: 20px;
+      padding: 6px 22px 6px 18px;
+      display: flex;
+      align-items: center;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    .navbar-login-btn span {
+      margin-right: 10px;
+      display: inline-block;
+      font-size: 1.18rem;
+      user-select: none;
+    }
+
+    .navbar-login-btn:hover,
+    .navbar-login-btn:focus {
+      background: #ffd600;
+      color: #6a1b9a;
+      outline: none;
+    }
+
+    /* Hero Section */
+    #hero-section-graphy {
+      min-height: 80vh;
+      padding-top: 64px; /* Adjusted for navbar height */
+      background: transparent;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: 'Inter', sans-serif;
+      text-align: center;
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+
+    #hero-section-graphy h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      letter-spacing: 2px;
+      color: #fff;
+      text-shadow: 0 0 12px rgba(255, 214, 0, 0.7);
+      opacity: 0;
+      animation: fadeInUp 1s forwards;
+      margin-bottom: 8px;
+      user-select: none;
+    }
+
+    #hero-section-graphy h1 #typewriter-word {
+      color: #ffd600;
+    }
+
+    #hero-section-graphy h1 #typewriter-cursor {
+      color: #ffd600;
+      opacity: 1;
+      user-select: none;
+    }
+
+    #hero-section-graphy p {
+      margin-top: 8px;
+      color: #fafafacc;
+      font-size: 1.25rem;
+      max-width: 650px;
+      text-align: center;
+      opacity: 0;
+      animation: fadeInUp 1s 0.3s forwards;
+      text-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+      user-select: none;
+    }
+
+    .hero-features {
+      margin: 40px 0 28px;
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      font-size: 1rem;
+      opacity: 0;
+      animation: fadeInUp 1s 0.6s forwards;
+    }
+
+    .hero-features span {
+      background: rgba(255, 214, 0, 0.25);
+      color: #ffd600;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      padding: 7px 22px;
+      border-radius: 29px;
+      gap: 8px;
+      box-shadow: 0 0 10px rgba(255, 214, 0, 0.3);
+      transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+      user-select: none;
+    }
+
+    .hero-features span:hover {
+      transform: scale(1.1);
+      background: rgba(255, 214, 0, 0.4);
+      box-shadow: 0 0 20px rgba(255, 214, 0, 0.7);
+      cursor: default;
+    }
+
+    /* Explore Button Dynamic Shine & Hover */
+    .explore-courses {
+      position: relative;
+      overflow: hidden;
+      background: #ffd600;
+      color: #6a1b9a;
+      padding: 16px 42px;
+      border-radius: 30px;
+      font-size: 1.25rem;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 6px 22px rgba(255, 214, 0, 0.28);
+      transition: background 0.25s, color 0.25s, box-shadow 0.25s, transform 0.25s;
+      will-change: transform;
+      user-select: none;
+    }
+    .explore-courses::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -75%;
+      width: 50%;
+      height: 100%;
+      background: linear-gradient(
+        120deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.6) 50%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      transform: skewX(-25deg);
+      animation: shine 2.5s infinite;
+      pointer-events: none;
+      z-index: 1;
+    }
+    .explore-courses:hover,
+    .explore-courses:focus {
+      background: #fff !important;
+      color: #6a1b9a !important;
+      outline: none;
+      box-shadow: 0 0 18px 6px rgba(255, 214, 0, 0.48);
+      transform: scale(1.05);
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 540px) {
+      #hero-section-graphy h1 {
+        font-size: 1.7rem;
+      }
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+        padding: 8px 32px;
+        gap: 6px;
+      }
+      .navbar-links {
+        align-items: flex-start;
+        gap: 10px;
+      }
+      .navbar-right {
+        align-self: flex-end;
+      }
+      .navbar-left span:first-child {
+        font-size: 1.4rem;
+      }
+      .navbar-left span:last-child {
+        font-size: 0.6rem;
+      }
+    }
+
+    /* Animations */
+    @keyframes shine {
+      0% {
+        left: -75%;
+      }
+      100% {
+        left: 125%;
+      }
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(25px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes float {
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-6px);
+      }
+    }
+
+    /* Scroll reveal utility class */
+    .reveal {
+      opacity: 0;
+      transform: translateY(25px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+
+
+  <!-- Navbar -->
+  <nav class="hidden">
+    <!-- Brand and Subtitle -->
+    <div class="navbar-left">
+      <span>Next Bigg Tech</span>
+      <span>by aditya jain</span>
+    </div>
+    <!-- Spacer before center nav -->
+    <div class="navbar-spacer"></div>
+    <!-- Navigation Links -->
+    <div class="navbar-links">
+      <a href="#">Courses</a>
+      <a href="#">About</a>
+      <a href="#">Students</a>
+    </div>
+    <!-- Spacer to push right-side icons -->
+    <div class="navbar-spacer"></div>
+    <!-- Cart Icon and Login Button -->
+    <div class="navbar-right">
+      <span title="Cart" tabindex="0" role="button" aria-label="Shopping Cart">🛒</span>
+      <button class="navbar-login-btn" aria-label="Log In">
+        <span>🔑</span>Log In
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <main id="hero-section-graphy">
+    <h1>
+      Empower your
+      <span id="typewriter-word">ambition</span><span id="typewriter-cursor" style="opacity: 0;">|</span>
+    </h1>
+    <p class="reveal active">
+      Years of expertise condensed into easy, risk-free learning built just
+      for you!
+    </p>
+    <div class="hero-features reveal active">
+      <span>✅ Lifetime Access</span>
+      <span>🔄 24 Hours Refund</span>
+      <span>👩‍🎓 4.5+ Lakh Enrolled</span>
+    </div>
+    <button class="explore-courses reveal active" onclick="window.location.href='https://courses.nextbiggtech.com/s/store';" aria-label="Explore Courses">
+      Explore Courses
+    </button>
+  </main>
+
+  <script>
+    // Typewriter Animation for Hero Section
+    (function () {
+      var words = ['ambition', 'destiny'];
+      var i = 0,
+        j = 0,
+        isDeleting = false,
+        loop = 0;
+      var el = document.getElementById('typewriter-word');
+      var cursor = document.getElementById('typewriter-cursor');
+
+      function type() {
+        var full = words[loop % 2];
+        if (!isDeleting) {
+          el.textContent = full.substring(0, j + 1);
+          j++;
+          if (j === full.length) {
+            setTimeout(() => {
+              isDeleting = true;
+              type();
+            }, 1150);
+            return;
+          }
+          setTimeout(type, 120);
+        } else {
+          el.textContent = full.substring(0, j - 1);
+          j--;
+          if (j < 0) {
+            isDeleting = false;
+            loop++;
+            setTimeout(type, 480);
+            return;
+          }
+          setTimeout(type, 60);
+        }
+      }
+      type();
+      setInterval(() => {
+        cursor.style.opacity = cursor.style.opacity === '0' ? '1' : '0';
+      }, 420);
+    })();
+
+    // Navbar Hide/Show on Scroll
+    let lastScroll = 0;
+    const navbar = document.querySelector('nav');
+
+    window.addEventListener('scroll', () => {
+      const currentScroll =
+        window.pageYOffset || document.documentElement.scrollTop;
+
+      if (currentScroll > lastScroll && currentScroll > 60) {
+        // Scrolling down
+        navbar.classList.add('hidden');
+      } else {
+        // Scrolling up or at top
+        navbar.classList.remove('hidden');
+      }
+      lastScroll = currentScroll <= 0 ? 0 : currentScroll; // Ensure lastScroll doesn't go negative
+    });
+
+    // Scroll reveal for elements with class "reveal"
+    function revealOnScroll() {
+      const reveals = document.querySelectorAll('.reveal');
+
+      for (let i = 0; i < reveals.length; i++) {
+        let windowHeight = window.innerHeight;
+        let elementTop = reveals[i].getBoundingClientRect().top;
+        let revealPoint = 130;
+
+        if (elementTop < windowHeight - revealPoint) {
+          reveals[i].classList.add('active');
+        }
+      }
+    }
+
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('load', revealOnScroll);
+  </script></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="1753099562639d" data-cat="3" class="is-section is-section-100 is-box" style="background-color: rgb(106, 27, 154);">
+	<div class="is-boxes">
+		<div class="is-box-centered">
+			<div class="is-container container"><div class="row clearfix"><div class="column full" autocomplete="off"><!-- Add Google Fonts link in your <head> -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&amp;display=swap" rel="stylesheet">
+
+<div style="background: rgb(106,27,154); padding: 40px 0; text-align: center; font-family: 'Montserrat', sans-serif;">
+  <div style="
+    display: inline-block;
+    border-radius: 16px;
+    border: 4px solid #FFD600;
+    box-sizing: border-box;
+    overflow: hidden;
+    ">
+    <iframe width="560" height="315" src="https://player.vimeo.com/video/1084537?title=0&amp;byline=0&amp;portrait=0&amp;badge=0" frameborder="0" allowfullscreen="" style="display:block; border-radius: 12px;">
+    </iframe>
+  </div>
+  <h1 style="
+    color: #FFD600; 
+    font-size: 3em; 
+    margin-top: 30px; 
+    margin-bottom: 10px; 
+    font-weight: 700; 
+    letter-spacing: 1.5px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    ">
+    Aditya Jain
+  </h1>
+  <div style="
+    color: #EEE; 
+    font-size: 1.2em; 
+    font-weight: 600; 
+    letter-spacing: 0.8px; 
+    line-height: 1.5;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+    ">
+    The Shortcut to Your Next Bigg Career Move!
+  </div>
+  <p style="
+    margin-top: 20px; 
+    color: #fafafa; 
+    font-size: 1.1em; 
+    max-width: 600px; 
+    margin-left: auto; 
+    margin-right: auto; 
+    font-weight: 400; 
+    letter-spacing: 0.5px; 
+    line-height: 1.6;
+    ">
+    Aditya Jain, an IIT Bombay alumnus and AIR 60 in GATE, is a former Data Scientist at Dream11. 
+    He has mentored over 10,000 professionals, helping them upskill and accelerate their hiring journey.
+  </p>
+</div>
+</div></div></div>
+		</div>
+	</div>
+</div>
+
+<div id="1752895627150d" data-cat="1" class="is-section is-section-100 is-box" style="background-color: rgb(106, 27, 154);">
+	<div class="is-boxes">
+		<div class="is-box-centered">
+			<div class="is-container container" style="max-width: 1400px;">
+				<div class="row clearfix">
+					<div class="column full"><style>
+:root {
+  --nbt-purple: #6A1B9A;
+  --nbt-yellow: #FFD600;
+}
+body {
+  margin: 0;
+  background: var(--nbt-purple);
+}
+.courses-section {
+  background: var(--nbt-purple);
+  padding: 60px 0 40px 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+.courses-heading {
+  color: var(--nbt-yellow);
+  font-size: 2.5rem;
+  font-weight: bold;
+  letter-spacing: -1px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.carousel-wrapper {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+.carousel-track {
+  display: flex;
+  align-items: stretch;
+  animation: carouselMove 48s linear infinite;
+  gap: 28px;
+  will-change: transform;
+}
+.carousel-track.paused {
+  animation-play-state: paused !important;
+}
+/* --- COURSE BLOCK STYLES --- */
+.course-block {
+  background: #28104E;
+  border-radius: 18px;
+  min-width: 320px;
+  max-width: 320px;
+  box-shadow: 0 2px 24px rgba(106,27,154,0.09);
+  margin: 0 4px;
+  border-top: 7px solid var(--nbt-yellow);
+  border: 2px solid var(--nbt-yellow);
+  height: 432px; /* fixed height */
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 22px;
+  transition: transform 0.25s, box-shadow 0.18s;
+  cursor: pointer;
+}
+.course-block-content {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+.course-image {
+  width: 100%;
+  border-radius: 12px 12px 0 0;
+  height: 140px;
+  object-fit: cover;
+}
+.course-category {
+  background: #fff7bc;
+  color: #a67700;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  margin-left: 22px;
+  margin-right: 22px;
+  margin-bottom: 7px;
+  padding: 3px 10px;
+  display: inline-block;
+  font-weight: 600;
+}
+.course-title {
+  color: var(--nbt-yellow);
+  font-size: 1.22rem;
+  font-weight: 600;
+  margin: 18px 0 7px 22px;
+}
+.course-level {
+  color: #c3a8ed;
+  font-size: 0.93rem;
+  margin-left: 10px;
+  font-weight: 500;
+}
+.course-instructor {
+  margin: 0 0 0 22px;
+  font-size: 0.91rem;
+  color: #c3a8ed;
+}
+.course-desc {
+  color: #E1D8F9;
+  font-size: 1rem;
+  margin: 0 0 16px 22px;
+  /* display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical; 
+  overflow: hidden;
+  text-overflow: ellipsis; */
+  overflow: visible;
+  text-overflow: unset;
+  display: block;      
+  flex-shrink: 0;
+  transition: -webkit-line-clamp 0.2s;
+}
+.course-detail-row {
+  display: flex;
+  align-items: center;
+  font-size: 0.97rem;
+  margin-left: 22px;
+  gap: 19px;
+  color: #FFD600;
+  margin-bottom: 11px;
+}
+.course-detail-row span {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.course-price-btn {
+  background: var(--nbt-yellow);
+  color: var(--nbt-purple);
+  font-size: 1.09rem;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 8px 28px;
+  margin-left: 22px;
+  margin-right: 22px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 0;
+  box-shadow: 0 0 12px rgba(255, 214, 0, 0.2);
+  margin-top: auto;
+  margin-bottom: 6px;
+  outline: none;
+  border: none;
+}
+.course-price-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -70%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(120deg, 
+    rgba(255,255,255,0.19) 0%, 
+    #FFFDE7 38%, 
+    rgba(255,255,255,0.92) 51%, 
+    #FFFDE7 65%, 
+    rgba(255,255,255,0.15) 100%);
+  transform: skewX(-22deg);
+  z-index: 1;
+  pointer-events: none;
+  mix-blend-mode: lighten;
+  transition: left 0.52s cubic-bezier(.66,0,1,1);
+}
+.course-price-btn:hover::before, .course-price-btn:focus::before {
+  left: 120%;
+  transition: left 0.72s cubic-bezier(.66,0,1,1);
+}
+.course-price-btn:hover, .course-price-btn:focus {
+  background: var(--nbt-purple);
+  color: var(--nbt-yellow);
+}
+@keyframes carouselMove {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-350px * 6)); }
+}
+/* Responsive */
+@media (max-width: 1100px) { 
+  .course-block { min-width: 270px; max-width: 270px; height: 432px; }
+}
+@media (max-width: 800px) { 
+  .carousel-track { gap: 18px; } 
+}
+@media (max-width: 700px) {
+  .courses-heading { font-size: 1.45rem; }
+  .courses-section { padding: 28px 0; }
+  .course-block { min-width: 95vw; max-width: 95vw; height: 410px; }
+}
+</style>
+
+<div class="courses-section">
+  <div class="courses-heading">Our Courses</div>
+  <div class="carousel-wrapper" id="carouselWrapper">
+    <div class="carousel-track" id="carouselTrack">
+  <div class="course-block">
+    <div class="course-block-content">
+      <img class="course-image" src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="DEMO" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&amp;fit=crop&amp;w=600&amp;q=80'">
+      <div class="course-category">Career Development</div>
+      <div class="course-title">DEMO<span class="course-level"> • Beginner to Intermediate</span></div>
+      <div class="course-instructor">by Aditya Jain</div>
+      <div class="course-desc">Free Demo Lecture By AJ</div>
+      <div class="course-detail-row">
+        <span>⏱ --</span>
+        <span>👥 1800</span>
+        <span>⭐ 4.9</span>
+      </div>
+    </div>
+    <button class="course-price-btn" onclick="window.open('https://courses.nextbiggtech.com/s/store', '_blank')">
+      Enroll Now
+    </button>
+  </div>
+  
+  <div class="course-block">
+    <div class="course-block-content">
+      <img class="course-image" src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Python Essentials" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&amp;fit=crop&amp;w=600&amp;q=80'">
+      <div class="course-category">Analytics</div>
+      <div class="course-title">Python Essentials<span class="course-level"> • Beginner</span></div>
+      <div class="course-instructor">by Aditya Jain</div>
+      <div class="course-desc">Python Essentials to Get High Paying Jobs | Master In-Demand Skills</div>
+      <div class="course-detail-row">
+        <span>⏱ 4 Hours</span>
+        <span>👥 1200</span>
+        <span>⭐ 4.8</span>
+      </div>
+    </div>
+    <button class="course-price-btn" onclick="window.open('https://courses.nextbiggtech.com/s/store', '_blank')">
+      Enroll Now
+    </button>
+  </div>
+  
+  <div class="course-block">
+    <div class="course-block-content">
+      <img class="course-image" src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="SQL" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&amp;fit=crop&amp;w=600&amp;q=80'">
+      <div class="course-category">Data Science</div>
+      <div class="course-title">SQL<span class="course-level"> • Intermediate</span></div>
+      <div class="course-instructor">by Aditya Jain</div>
+      <div class="course-desc">Master SQL for High Paying Jobs | Become a Data Expert</div>
+      <div class="course-detail-row">
+        <span>⏱ 3 Hours</span>
+        <span>👥 950</span>
+        <span>⭐ 4.7</span>
+      </div>
+    </div>
+    <button class="course-price-btn" onclick="window.open('https://courses.nextbiggtech.com/s/store', '_blank')">
+      Enroll Now
+    </button>
+  </div>
+  
+  <div class="course-block">
+    <div class="course-block-content">
+      <img class="course-image" src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Python" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&amp;fit=crop&amp;w=600&amp;q=80'">
+      <div class="course-category">Advanced Python</div>
+      <div class="course-title">Python<span class="course-level"> • All Levels</span></div>
+      <div class="course-instructor">by Aditya Jain</div>
+      <div class="course-desc">Advanced Python to Get High Paying Jobs | Boost Your Coding Career</div>
+      <div class="course-detail-row">
+        <span>⏱ 5 Hours</span>
+        <span>👥 700</span>
+        <span>⭐ 4.9</span>
+      </div>
+    </div>
+    <button class="course-price-btn" onclick="window.open('https://courses.nextbiggtech.com/s/store', '_blank')">
+      Enroll Now
+    </button>
+  </div>
+  
+  <div class="course-block">
+    <div class="course-block-content">
+      <img class="course-image" src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Data Science" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&amp;fit=crop&amp;w=600&amp;q=80'">
+      <div class="course-category">Advanced Python</div>
+      <div class="course-title">Data Science<span class="course-level"> • All Levels</span></div>
+      <div class="course-instructor">by Aditya Jain</div>
+      <div class="course-desc">ANumPy for High Paying Jobs | Master Data Handling with Python</div>
+      <div class="course-detail-row">
+        <span>⏱ 5 Hours</span>
+        <span>👥 700</span>
+        <span>⭐ 4.9</span>
+      </div>
+    </div>
+    <button class="course-price-btn" onclick="window.open('https://courses.nextbiggtech.com/s/store', '_blank')">
+      Enroll Now
+    </button>
+  </div>
+  
+  <div class="course-block">
+    <div class="course-block-content">
+      <img class="course-image" src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="DEMO" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&amp;fit=crop&amp;w=600&amp;q=80'">
+      <div class="course-category">Career Development</div>
+      <div class="course-title">DEMO<span class="course-level"> • Beginner to Intermediate</span></div>
+      <div class="course-instructor">by Aditya Jain</div>
+      <div class="course-desc">Free Demo Lecture By AJ</div>
+      <div class="course-detail-row">
+        <span>⏱ --</span>
+        <span>👥 1800</span>
+        <span>⭐ 4.9</span>
+      </div>
+    </div>
+    <button class="course-price-btn" onclick="window.open('https://courses.nextbiggtech.com/s/store', '_blank')">
+      Enroll Now
+    </button>
+  </div>
+  
+  <div class="course-block">
+    <div class="course-block-content">
+      <img class="course-image" src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Python Essentials" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&amp;fit=crop&amp;w=600&amp;q=80'">
+      <div class="course-category">Analytics</div>
+      <div class="course-title">Python Essentials<span class="course-level"> • Beginner</span></div>
+      <div class="course-instructor">by Aditya Jain</div>
+      <div class="course-desc">Python Essentials to Get High Paying Jobs | Master In-Demand Skills</div>
+      <div class="course-detail-row">
+        <span>⏱ 4 Hours</span>
+        <span>👥 1200</span>
+        <span>⭐ 4.8</span>
+      </div>
+    </div>
+    <button class="course-price-btn" onclick="window.open('https://courses.nextbiggtech.com/s/store', '_blank')">
+      Enroll Now
+    </button>
+  </div>
+  
+  <div class="course-block">
+    <div class="course-block-content">
+      <img class="course-image" src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="SQL" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&amp;fit=crop&amp;w=600&amp;q=80'">
+      <div class="course-category">Data Science</div>
+      <div class="course-title">SQL<span class="course-level"> • Intermediate</span></div>
+      <div class="course-instructor">by Aditya Jain</div>
+      <div class="course-desc">Master SQL for High Paying Jobs | Become a Data Expert</div>
+      <div class="course-detail-row">
+        <span>⏱ 3 Hours</span>
+        <span>👥 950</span>
+        <span>⭐ 4.7</span>
+      </div>
+    </div>
+    <button class="course-price-btn" onclick="window.open('https://courses.nextbiggtech.com/s/store', '_blank')">
+      Enroll Now
+    </button>
+  </div>
+  
+  <div class="course-block">
+    <div class="course-block-content">
+      <img class="course-image" src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Python" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&amp;fit=crop&amp;w=600&amp;q=80'">
+      <div class="course-category">Advanced Python</div>
+      <div class="course-title">Python<span class="course-level"> • All Levels</span></div>
+      <div class="course-instructor">by Aditya Jain</div>
+      <div class="course-desc">Advanced Python to Get High Paying Jobs | Boost Your Coding Career</div>
+      <div class="course-detail-row">
+        <span>⏱ 5 Hours</span>
+        <span>👥 700</span>
+        <span>⭐ 4.9</span>
+      </div>
+    </div>
+    <button class="course-price-btn" onclick="window.open('https://courses.nextbiggtech.com/s/store', '_blank')">
+      Enroll Now
+    </button>
+  </div>
+  
+  <div class="course-block">
+    <div class="course-block-content">
+      <img class="course-image" src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Data Science" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&amp;fit=crop&amp;w=600&amp;q=80'">
+      <div class="course-category">Advanced Python</div>
+      <div class="course-title">Data Science<span class="course-level"> • All Levels</span></div>
+      <div class="course-instructor">by Aditya Jain</div>
+      <div class="course-desc">ANumPy for High Paying Jobs | Master Data Handling with Python</div>
+      <div class="course-detail-row">
+        <span>⏱ 5 Hours</span>
+        <span>👥 700</span>
+        <span>⭐ 4.9</span>
+      </div>
+    </div>
+    <button class="course-price-btn" onclick="window.open('https://courses.nextbiggtech.com/s/store', '_blank')">
+      Enroll Now
+    </button>
+  </div>
+  </div>
+  </div>
+</div>
+
+<script>
+const courses = [
+  {
+    id: 1,
+    title: "DEMO",
+    category: "Career Development",
+    description: "Free Demo Lecture By AJ",
+    duration: "",
+    students: 1800,
+    rating: 4.9,
+    price: "FREE",
+    image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=600&q=80",
+    level: "Beginner to Intermediate",
+    instructor: "Aditya Jain"
+  },
+  {
+    id: 2,
+    title: "Python Essentials",
+    category: "Analytics",
+    description: "Python Essentials to Get High Paying Jobs | Master In-Demand Skills",
+    duration: "4 Hours",
+    students: 1200,
+    rating: 4.8,
+    price: "",
+    image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=600&q=80",
+    level: "Beginner",
+    instructor: "Aditya Jain"
+  },
+  {
+    id: 3,
+    title: "SQL",
+    category: "Data Science",
+    description: "Master SQL for High Paying Jobs | Become a Data Expert",
+    duration: "3 Hours",
+    students: 950,
+    rating: 4.7,
+    price: "",
+    image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=600&q=80",
+    level: "Intermediate",
+    instructor: "Aditya Jain"
+  },
+  {
+    id: 4,
+    title: "Python",
+    category: "Advanced Python",
+    description: "Advanced Python to Get High Paying Jobs | Boost Your Coding Career",
+    duration: "5 Hours",
+    students: 700,
+    rating: 4.9,
+    price: "",
+    image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=600&q=80",
+    level: "All Levels",
+    instructor: "Aditya Jain"
+  },
+  {
+    id: 5,
+    title: "Data Science",
+    category: "Advanced Python",
+    description: "ANumPy for High Paying Jobs | Master Data Handling with Python",
+    duration: "5 Hours",
+    students: 700,
+    rating: 4.9,
+    price: "",
+    image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=600&q=80",
+    level: "All Levels",
+    instructor: "Aditya Jain"
+  }
+];
+
+const imgFallback = "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=600&q=80";
+
+function getCourseImage(url) {
+  return url || imgFallback;
+}
+
+// Duplicate courses for seamless carousel effect
+const coursesForCarousel = [...courses, ...courses];
+
+function courseBlock(course) {
+  return `
+  <div class="course-block">
+    <div class="course-block-content">
+      <img class="course-image" src="${getCourseImage(course.image)}" alt="${course.title}" onerror="this.onerror=null;this.src='${imgFallback}'">
+      <div class="course-category">${course.category}</div>
+      <div class="course-title">${course.title}<span class="course-level">${course.level ? ' • '+course.level : ''}</span></div>
+      <div class="course-instructor">by ${course.instructor}</div>
+      <div class="course-desc">${course.description}</div>
+      <div class="course-detail-row">
+        <span>⏱ ${course.duration || '--'}</span>
+        <span>👥 ${course.students || '--'}</span>
+        <span>⭐ ${course.rating || '--'}</span>
+      </div>
+    </div>
+    <button class="course-price-btn" onclick="window.open('https://courses.nextbiggtech.com/s/store', '_blank')">
+      Enroll Now
+    </button>
+  </div>
+  `;
+}
+
+document.getElementById('carouselTrack').innerHTML = coursesForCarousel.map(courseBlock).join('');
+
+// Pause carousel on hover
+document.addEventListener('DOMContentLoaded', () => {
+  const track = document.getElementById('carouselTrack');
+  const wrapper = document.getElementById('carouselWrapper');
+  wrapper.addEventListener('mouseenter', () => {
+    track.classList.add('paused');
+  });
+  wrapper.addEventListener('mouseleave', () => {
+    track.classList.remove('paused');
+  });
+});
+</script></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="1754577425917d" data-cat="1" class="is-section is-section-100 is-box" style="background-color: rgb(106, 27, 154);">
+	<div class="is-boxes">
+		<div class="is-box-centered">
+			<div class="is-container container" style="max-width: 1400px;">
+				<div class="row clearfix">
+					<div class="column full"><style>
+  .features-section {
+    background: rgb(106,27,154);  /* <-- changed */
+    color: #fff;                  /* <-- changed for text contrast on purple */
+    padding: 48px 18px;
+    border-radius: 18px;
+    max-width: 1250px;
+    margin: 48px auto 0 auto;
+    box-shadow: 0 4px 32px 0 #FFD60033;
+    text-align: center;
+    font-family: 'Inter', Arial, sans-serif;
+  }
+  .features-section h2 {
+    font-size: 2.35rem;
+    font-weight: 700;
+    margin-bottom: 32px;
+    color: #FFD600;    /* <-- Set heading to yellow for contrast */
+  }
+  .features-section h2 span {
+    color: #fff;      /* White "Course" text for punch */
+  }
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  /* Style for feature cards */
+  .feature-card {
+    background: rgba(255, 224, 102, 0.11);     /* <-- changed to white for contrast */
+    border-radius: 16px;
+    padding: 32px 18px 22px 18px;
+    box-shadow: 0 0 16px 2px #6A1B9A1A, 0 4px 24px 0 #FFD60011;
+    border: 2px solid #FFD600;   /* light yellow border */
+    transition: box-shadow 0.18s, transform 0.18s, border 0.18s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 160px;
+  }
+  .feature-card:hover {
+    box-shadow: 0 4px 22px 2px #FFD60099;
+    transform: translateY(-4px) scale(1.04);
+    border: 2px solid #FFD600;
+  }
+  .feature-icon {
+    font-size: 2.1rem;
+    color: #29b858;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .feature-title {
+    margin-bottom: 10px;
+    font-size: 1.16rem;
+    color: #FFD600;
+    font-weight: 600;
+  }
+  .feature-desc {
+    font-size: 1rem;
+    color: #fff;
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  /* Center last row when only 2 cards */
+  .feature-card.empty-card {
+    background: none;
+    box-shadow: none;
+    pointer-events: none;
+    border: none;
+    min-height: 0;
+    padding: 0;
+  }
+
+  /* Responsive for mobile: stack in one column */
+  @media (max-width: 900px) {
+    .features-section {
+      padding: 30px 3vw 20px 3vw;
+    }
+    .features-section h2 {
+      font-size: 1.46rem;
+      margin-bottom: 18px;
+    }
+    .features-grid {
+      grid-template-columns: 1fr;
+      gap: 18px;
+    }
+    .feature-card.empty-card {
+      display: none;
+    }
+  }
+</style>
+
+<section class="features-section">
+  <h2><span>Course</span> Features</h2>
+  <div class="features-grid">
+    <!-- Row 1 -->
+    <div class="feature-card">
+      <div class="feature-icon">🎯</div>
+      <div class="feature-title">Industry Focused Curriculum</div>
+      <div class="feature-desc">
+        Courses equip students with in-demand skills companies want, helping you stand out in interviews.
+      </div>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">⏱️</div>
+      <div class="feature-title">Time-Efficient Learning</div>
+      <div class="feature-desc">
+        Complete programs in just 7-8 hours on average, focusing only on what truly matters.
+      </div>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🙋‍♂️</div>
+      <div class="feature-title">Learner-First Approach</div>
+      <div class="feature-desc">
+        Self-paced courses allow every student to learn at their own pace and routine.
+      </div>
+    </div>
+    <!-- Row 2 -->
+    <div class="feature-card">
+      <div class="feature-icon">💼</div>
+      <div class="feature-title">Job Placement Opportunity</div>
+      <div class="feature-desc">
+        Certified learners get resume sharing across IIT Bombay networks to access top placements.
+      </div>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🔀</div>
+      <div class="feature-title">Flexible Learning Paths</div>
+      <div class="feature-desc">
+        Access courses in any order based on your skillsets —&nbsp;no rigid sequences.
+      </div>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🛠️</div>
+      <div class="feature-title">Learn by Doing</div>
+      <div class="feature-desc">
+        Courses are 100% practical, with reference material and real-world alignment.
+      </div>
+    </div>
+    <!-- Row 3 with 2 cards, centered using empty cards -->
+    <div class="feature-card"></div><!-- empty card for centering -->
+    <div class="feature-card">
+      <div class="feature-icon">⏳</div>
+      <div class="feature-title">Concise Lectures</div>
+      <div class="feature-desc">
+        Average lecture: 10 mins —&nbsp;learn anywhere, anytime, no overwhelming marathon sessions.
+      </div>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🏅</div>
+      <div class="feature-title">Evaluation &amp; Certification</div>
+      <div class="feature-desc">
+        Certifications that hold value and help you build credibility during interviews.
+      </div>
+    </div>
+    <div class="feature-card empty-card"></div><!-- empty card for centering -->
+  </div>
+</section></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="1752846138398d" data-cat="1" class="is-section is-section-100 is-box" style="background-color: rgb(106, 27, 154);">
+	<div class="is-boxes">
+		<div class="is-box-centered">
+			<div class="is-container container" style="max-width: 1400px;">
+				<div class="row clearfix">
+					<div class="column full"><!-- ... Keep existing <style> ... -->
+<style>
+  body {
+    background: #6A1B9A;
+    margin: 0;
+    font-family: 'Inter', Arial, sans-serif;
+    color: #fff;
+  }
+  .why-learnsphere {
+    background: #6A1B9A;
+    color: #fff;
+    padding: 48px 16px;
+    text-align: center;
+    border-radius: 18px;
+    max-width: 1250px;
+    margin: 48px auto 0 auto;
+    box-shadow: 0 4px 32px 0 #ffe06622;
+  }
+  .why-learnsphere h2 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #ffe066;
+  }
+  .why-learnsphere h2 span {
+    color: #fff;
+  }
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);    /* Three columns */
+    grid-template-rows: repeat(2, auto);      /* Two rows */
+    gap: 24px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .feature-item {
+    background: rgba(255, 224, 102, 0.11);
+    border-radius: 16px;
+    padding: 30px 18px 22px 18px;
+    box-shadow: 0 0 8px 2px #ffd60033;
+    transition: box-shadow 0.2s, transform 0.2s;
+    border: 2px solid transparent;
+  }
+  .feature-item:hover {
+    box-shadow: 0 4px 24px 2px #ffd60099;
+    transform: translateY(-5px) scale(1.045);
+    border-color: #ffe066;
+  }
+  .feature-icon {
+    font-size: 2.2rem;
+    color: #ffe066;
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .feature-item h3 {
+    margin-bottom: 8px;
+    font-size: 1.15rem;
+    color: #ffe066;
+    font-weight: 600;
+  }
+  .feature-item p {
+    font-size: 1rem;
+    color: #fff;
+    line-height: 1.5;
+  }
+  @media (max-width: 680px) {
+    .why-learnsphere {
+      padding: 26px 3vw;
+    }
+    .features-grid {
+      grid-template-columns: 1fr;
+      grid-template-rows: none;
+      gap: 16px;
+    }
+    .feature-item {
+      padding: 20px 10px 16px 10px;
+    }
+  }
+</style>
+
+<section class="why-learnsphere">
+  <h2><span>Why</span> Next Bigg Tech</h2>
+  <div class="features-grid">
+
+    <div class="feature-item">
+      <div class="feature-icon">▶️</div>
+      <h3>Flexible Learning</h3>
+      <p>Study any topic, any time, from anywhere at your pace.</p>
+    </div>
+
+    <div class="feature-item">
+      <div class="feature-icon">∞</div>
+      <h3>Unlimited Access</h3>
+      <p>One-time payment unlocks every course, forever.</p>
+    </div>
+
+    <div class="feature-item">
+      <div class="feature-icon">⬆️</div>
+      <h3>Always Updated</h3>
+      <p>Enjoy lifetime updates to content at no extra cost.</p>
+    </div>
+
+    <div class="feature-item">
+      <div class="feature-icon">💬</div>
+      <h3>Live Q&amp;A Events</h3>
+      <p>Join exclusive group sessions and get your questions answered monthly.</p>
+    </div>
+
+    <div class="feature-item">
+      <div class="feature-icon">🌐</div>
+      <h3>Vibrant Community</h3>
+      <p>Connect with peers in a friendly, chat-based environment.</p>
+    </div>
+
+    <div class="feature-item">
+      <div class="feature-icon">💡</div>
+      <h3>Affordable &amp; Actionable</h3>
+      <p>Courses designed for real results at a pocket-friendly price.</p>
+    </div>
+
+  </div>
+</section>
+</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="1752827967348d" data-cat="1" class="is-section is-section-100 is-box" style="background-color: rgb(106, 27, 154);">
+	<div class="is-boxes">
+		<div class="is-box-centered">
+			<div class="is-container container" style="max-width: 1400px;">
+				<div class="row clearfix">
+					<div class="column full"><meta charset="UTF-8">
+<title>Who is Next Bigg Tech For?</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+  body {
+    background: #6B21A8; /* Deep Purple */
+    margin: 0;
+    font-family: 'Inter', Arial, sans-serif;
+    color: #fff;
+  }
+  .audience-section {
+    background: #6B21A8; /* Purple background */
+    color: #fff;
+    padding: 48px 16px;
+    text-align: center;
+    border-radius: 18px;
+    max-width: 1250px;
+    margin: 48px auto 0 auto;
+    box-shadow: 0 4px 32px 0 #FFD60033;
+  }
+  .audience-section h2 {
+    font-size: 2.35rem;
+    font-weight: 700;
+    margin-bottom: 32px;
+    color: #FFD600;
+  }
+  .audience-section h2 span {
+    color: #fff;
+  }
+  .audience-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns */
+    grid-template-rows: repeat(2, auto);   /* Two rows */
+    gap: 26px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .audience-item {
+    background: rgba(255, 214, 0, 0.10);
+    border-radius: 16px;
+    padding: 30px 18px 22px 18px;
+    box-shadow: 0 0 10px 2px #ffd60034;
+    border: 2px solid transparent;
+    transition: box-shadow 0.18s, transform 0.18s, border 0.18s;
+  }
+  .audience-item:hover {
+    box-shadow: 0 4px 22px 2px #FFD60099;
+    transform: translateY(-4px) scale(1.04);
+    border: 2px solid #FFD600;
+  }
+  .audience-icon {
+    font-size: 2rem;
+    color: #FFD600;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .audience-item h3 {
+    margin-bottom: 8px;
+    font-size: 1.12rem;
+    color: #FFD600;
+    font-weight: 600;
+  }
+  .audience-item p {
+    font-size: 1rem;
+    color: #fff;
+    line-height: 1.5;
+    margin: 0;
+  }
+  @media (max-width: 680px) {
+    .audience-section {
+      padding: 26px 2vw;
+    }
+    .audience-grid {
+      grid-template-columns: 1fr; /* Stack in single column on small screens */
+      grid-template-rows: none;
+      gap: 16px;
+    }
+    .audience-item {
+      padding: 17px 7px 11px 7px;
+    }
+  }
+</style>
+
+<section class="audience-section">
+  <h2><span>Who is</span> Next Bigg Tech For?</h2>
+  <div class="audience-grid">
+
+    <div class="audience-item">
+      <div class="audience-icon">🎓</div>
+      <h3>Students</h3>
+      <p>Explore skills and knowledge areas that go beyond ordinary classroom learning.</p>
+    </div>
+
+    <div class="audience-item">
+      <div class="audience-icon">👔</div>
+      <h3>Working Professionals</h3>
+      <p>Advance your career and amplify your productivity with future-ready expertise.</p>
+    </div>
+
+    <div class="audience-item">
+      <div class="audience-icon">💻</div>
+      <h3>Freelancers</h3>
+      <p>Find smart tools, tips, and support to grow and manage your freelance business efficiently.</p>
+    </div>
+
+    <div class="audience-item">
+      <div class="audience-icon">🔀</div>
+      <h3>Career Switchers</h3>
+      <p>Get tailored guidance and resources to confidently transition into exciting new fields.</p>
+    </div>
+
+    <div class="audience-item">
+      <div class="audience-icon">👨‍👩‍👧‍👦</div>
+      <h3>Parents</h3>
+      <p>Balance self-improvement and family priorities with resources designed for busy lives.</p>
+    </div>
+
+    <div class="audience-item">
+      <div class="audience-icon">🚀</div>
+      <h3>Visionaries</h3>
+      <p>Fuel your ambitions with strategies and inspiration to build your own path.</p>
+    </div>
+
+  </div>
+</section>
+</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="1752847750428d" data-cat="1" class="is-section is-section-100 is-box" style="background-color: rgb(110, 27, 161);">
+	<div class="is-boxes">
+		<div class="is-box-centered">
+			<div class="is-container container" style="max-width: 1400px;">
+				<div class="row clearfix">
+					<div class="column full">
+
+
+  <meta charset="UTF-8">
+  <title>Next Bigg Tech Global Student Highlights</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <style>
+    body {
+      background: #6B21A8;
+      color: #fff;
+      margin: 0;
+      font-family: 'Inter', Arial, sans-serif;
+    }
+    .student-stats-main {
+      max-width: 1250px;
+      margin: 56px auto 0 auto;
+      padding: 24px 18px 36px 18px;
+      border-radius: 22px;
+      background: #6B21A8;
+      box-shadow: 0 4px 40px 0 #FFD60022;
+    }
+    .student-stats-main h2 {
+      font-size: 2.05rem;
+      font-weight: 700;
+      color: #FFD600;
+      text-align: center;
+      margin-bottom: 8px;
+      letter-spacing: 0.5px;
+    }
+    .student-stats-main .subtitle {
+      display: block;
+      text-align: center;
+      color: #fff;
+      font-size: 1.13rem;
+      font-weight: 500;
+      margin-bottom: 38px;
+      letter-spacing: 0.7px;
+    }
+    .student-stats-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 28px;
+    }
+    .stats-block {
+      background: rgba(255,214,0,0.07);
+      box-shadow: 0 0 10px 2px #ffd60022;
+      border-radius: 16px;
+      padding: 34px 22px 34px 22px;
+      min-height: 245px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      position: relative;
+      overflow: hidden;
+    }
+    .main-number {
+      color: #FFD600;
+      font-size: 2.1rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+    .stat-caption {
+      font-size: 1rem;
+      margin-top: 10px;
+      color: #FFD600;
+      font-weight: 600;
+    }
+    .testimonial {
+      font-size: 1.09rem;
+      margin: 11px 0 0 0;
+      line-height: 1.5;
+      min-height: 68px;
+      transition: opacity .7s;
+    }
+    .testimonial-author {
+      margin-top: 9px;
+      font-size: 0.98rem;
+      font-weight: 300;
+      color: #fffde3;
+    }
+    .quote-animate {
+      font-size: 1.06rem;
+      color: #fff;
+      margin-top: 14px;
+      min-height: 52px;
+      transition: opacity .6s;
+    }
+
+    @media (max-width: 950px) {
+      .student-stats-section {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, auto);
+      }
+    }
+    /* Block 2 (Avatars) Styles */
+    .stats-circle-block {
+      position: relative;
+      min-height: 230px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .avatar-circles-bg {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+    .avatar-img {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #FFD600;
+      box-shadow: 0 3px 12px #ffd60025;
+      position: absolute;
+      opacity: 0.99;
+      background: #ffd60033;
+      transition: border .25s;
+      z-index: 1;
+    }
+    /* Custom circle avatar positions - don't overlap number */
+    .circle1  { left: 41%; top: 10px; }
+    .circle2  { left: 13%; top: 42px;}
+    .circle3  { right: 10%; top: 46px;}
+    .circle4  { left: 15%; bottom: 28px;}
+    .circle5  { right: 12%; bottom: 20px;}
+    .circle6  { left: 37%; bottom: 12px;}
+    .circle7  { right: 38%; top: 24px;}
+    .main-number-center {
+      color: #FFD600;
+      background: #6B21A8;
+      font-size: 2.35rem;
+      font-weight: 850;
+      border-radius: 1em;
+      padding: 4px 32px;
+      position: relative;
+      z-index: 5;
+      margin: 46px auto 0 auto;
+      text-align: center;
+      box-shadow: 0 3px 17px #ffd60035;
+      letter-spacing: 1.2px;
+      min-width: 180px;
+      min-height: 2.8em;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+    /* Subtitle for block 2 */
+    .circle-caption {
+      font-size: 1.08rem;
+      color: #FFD600;
+      margin-top: 16px;
+      font-weight: 600;
+      text-align: center;
+    }
+    /* Responsive fix for avatar block */
+    @media (max-width: 650px) {
+      .main-number-center { 
+        font-size: 1.65rem; min-width:120px; padding:3px 10px;}
+      .avatar-img { width:34px; height:34px;}
+    }
+  </style>
+
+
+
+<section class="student-stats-main">
+  <h2>From Our Students</h2>
+  <span class="subtitle">Across <span style="color:#FFD600;font-weight:700;">12 Countries</span></span>
+  <div class="student-stats-section">
+
+    <!-- Block 1: Dynamic Reach Testimonial -->
+    <div class="stats-block" id="block-reach">
+      <div class="main-number" id="reach-number">834K</div>
+      <div class="stat-caption" id="reach-caption">Projects Completed</div>
+      <div class="testimonial" id="testimonial-text">"Course projects really helped me turn knowledge into action. Great support too!"</div>
+      <div class="testimonial-author" id="testimonial-author">Maya Trivedi, Digital Maven</div>
+    </div>
+
+    <!-- Block 2: Centered Constant Number with Multiple Avatar Circles (Animated) -->
+    <div class="stats-block stats-circle-block" id="block-students">
+      <div class="avatar-circles-bg">
+        <img class="avatar-img circle1" id="avatar1" src="https://randomuser.me/api/portraits/men/44.jpg" alt="Student 1">
+        <img class="avatar-img circle2" id="avatar2" src="https://randomuser.me/api/portraits/women/19.jpg" alt="Student 2">
+        <img class="avatar-img circle3" id="avatar3" src="https://randomuser.me/api/portraits/men/11.jpg" alt="Student 3">
+        <img class="avatar-img circle4" id="avatar4" src="https://randomuser.me/api/portraits/women/33.jpg" alt="Student 4">
+        <img class="avatar-img circle5" id="avatar5" src="https://randomuser.me/api/portraits/men/48.jpg" alt="Student 5">
+        <img class="avatar-img circle6" id="avatar6" src="https://randomuser.me/api/portraits/women/28.jpg" alt="Student 6">
+        <img class="avatar-img circle7" id="avatar7" src="https://randomuser.me/api/portraits/men/21.jpg" alt="Student 7">
+      </div>
+      <div class="main-number-center" id="students-number">498,100</div>
+      <div class="circle-caption">Students and Counting!</div>
+    </div>
+
+    <!-- Block 3: Rotating Quotes -->
+    <div class="stats-block" id="block-quotes">
+      <div class="quote-animate" id="quote-text">"The projects pushed me to think differently and innovate constantly."</div>
+      <div class="testimonial-author" id="quote-author">Megha Jain</div>
+    </div>
+
+    <!-- Block 4: Animated Photo Block (Group Events) -->
+    <div class="stats-block" id="block-photo">
+      <img id="group-photo" src="https://randomuser.me/api/portraits/men/35.jpg" alt="Community event" style="width:100%;border-radius:14px;object-fit:cover;max-height:165px;box-shadow:0 1px 10px #FFD60045;transition: opacity .6s;">
+      <div class="stat-caption" style="margin-top:12px;">Vibrant Community Events</div>
+    </div>
+  </div>
+</section>
+<script>
+  // Block 1: Reach/Testimonial Animation
+  const reachStats = [
+    {
+      number: "957K",
+      caption: "Accounts Reached",
+      testimonial: '"I was most excited about high engagement-driven content and monetization. Both were covered nicely in the curriculum. So happy!"',
+      author: "Rashmi Sheoran, IG Mastery"
+    },
+    {
+      number: "1.2M",
+      caption: "Stories Inspired",
+      testimonial: '"The curriculum brought clarity to my creative process. Truly life-changing!"',
+      author: "Bhavesh Menon, Startup Launch"
+    },
+    {
+      number: "834K",
+      caption: "Projects Completed",
+      testimonial: '"Course projects really helped me turn knowledge into action. Great support too!"',
+      author: "Maya Trivedi, Digital Maven"
+    }
+  ];
+  let reachIdx = 0;
+  setInterval(() => {
+    reachIdx = (reachIdx + 1) % reachStats.length;
+    document.getElementById("reach-number").innerText = reachStats[reachIdx].number;
+    document.getElementById("reach-caption").innerText = reachStats[reachIdx].caption;
+    document.getElementById("testimonial-text").innerText = reachStats[reachIdx].testimonial;
+    document.getElementById("testimonial-author").innerText = reachStats[reachIdx].author;
+  }, 1000);
+
+  // Block 2: Avatar Circles Animation - CONSTANT NUMBER in Center
+  const avatarSets = [
+    [
+      "https://randomuser.me/api/portraits/men/56.jpg",
+      "https://randomuser.me/api/portraits/women/42.jpg",
+      "https://randomuser.me/api/portraits/men/58.jpg",
+      "https://randomuser.me/api/portraits/women/18.jpg",
+      "https://randomuser.me/api/portraits/men/15.jpg",
+      "https://randomuser.me/api/portraits/women/22.jpg",
+      "https://randomuser.me/api/portraits/men/41.jpg"
+    ],
+    [
+      "https://randomuser.me/api/portraits/men/52.jpg",
+      "https://randomuser.me/api/portraits/women/45.jpg",
+      "https://randomuser.me/api/portraits/men/61.jpg",
+      "https://randomuser.me/api/portraits/women/38.jpg",
+      "https://randomuser.me/api/portraits/men/68.jpg",
+      "https://randomuser.me/api/portraits/women/13.jpg",
+      "https://randomuser.me/api/portraits/men/12.jpg"
+    ],
+    [
+      "https://randomuser.me/api/portraits/men/44.jpg",
+      "https://randomuser.me/api/portraits/women/19.jpg",
+      "https://randomuser.me/api/portraits/men/11.jpg",
+      "https://randomuser.me/api/portraits/women/33.jpg",
+      "https://randomuser.me/api/portraits/men/48.jpg",
+      "https://randomuser.me/api/portraits/women/28.jpg",
+      "https://randomuser.me/api/portraits/men/21.jpg"
+    ]
+  ];
+  let studentIdx = 0;
+  setInterval(() => {
+    studentIdx = (studentIdx + 1) % avatarSets.length;
+    let avatars = avatarSets[studentIdx];
+    for (let i = 1; i <= 7; i++) {
+      document.getElementById("avatar" + i).src = avatars[i - 1];
+    }
+    // The number stays constant as requested
+  }, 1000);
+
+  // Block 3: Rotating Quotes
+  const quotes = [
+    { text: '"Will make you question all that you\'ve been doing till now."', author: "Riya Baria" },
+    { text: '"The content was practical and actionable from day one."', author: "Siddharth K." },
+    { text: '"The projects pushed me to think differently and innovate constantly."', author: "Megha Jain" }
+  ];
+  let quoteIdx = 0;
+  setInterval(() => {
+    quoteIdx = (quoteIdx + 1) % quotes.length;
+    document.getElementById("quote-text").innerText = quotes[quoteIdx].text;
+    document.getElementById("quote-author").innerText = quotes[quoteIdx].author;
+  }, 1000);
+
+  // Block 4: Animated Photo Block
+  const groupPhotos = [
+    "https://randomuser.me/api/portraits/men/45.jpg",
+    "https://randomuser.me/api/portraits/women/44.jpg",
+    "https://randomuser.me/api/portraits/men/35.jpg"
+  ];
+  let photoIdx = 0;
+  setInterval(() => {
+    photoIdx = (photoIdx + 1) % groupPhotos.length;
+    document.getElementById("group-photo").src = groupPhotos[photoIdx];
+  }, 1000);
+</script>
+
+
+</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="1752826809439d" data-cat="1" class="is-section is-section-100 is-box" style="background-color: rgb(102, 25, 149);">
+	<div class="is-boxes">
+		<div class="is-box-centered">
+			<div class="is-container container" style="max-width: 1400px;">
+				<div class="row clearfix">
+					<div class="column full"><meta charset="UTF-8">
+  <title>Meet Our Founder - Next Bigg Tech</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      background: #6B21A8;
+      margin: 0;
+      font-family: 'Inter', Arial, sans-serif;
+      color: #fff;
+    }
+
+    .founder-section {
+      background: #6B21A8;
+      color: #fff;
+      padding: 50px 16px 48px 16px;
+      max-width: 1200px;
+      margin: 40px auto 0 auto;
+      border-radius: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      box-shadow: 0 4px 32px 0 #FFD60022;
+    }
+
+    .founder-text {
+      flex: 1 1 340px;
+      min-width: 320px;
+      margin-right: 36px;
+      margin-bottom: 28px;
+    }
+
+    .founder-section h2 {
+      font-size: 2.3rem;
+      margin-bottom: 18px;
+      font-weight: 700;
+      color: #FFD600;
+    }
+
+    .founder-section h2 span {
+      color: #fff;
+    }
+
+    .founder-text p {
+      color: #fff;
+      font-size: 1.08rem;
+      margin: 0 0 18px 0;
+      line-height: 1.6;
+    }
+
+    .founder-highlight {
+      font-weight: 600;
+      color: #FFD600;
+    }
+
+    .social-bar {
+      background: rgba(255, 214, 0, 0.10);
+      padding: 22px 0 10px 0;
+      border-radius: 15px;
+      text-align: center;
+      margin-top: 28px;
+      box-shadow: 0 0 10px 1px #ffd60030;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .social-bar span {
+      display: inline; /* Changed from block to inline */
+      color: #FFD600;
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+      z-index: 2;
+      position: relative;
+    }
+
+    .social-bar span#followers-count-bar {
+      margin-right: 5px; /* Add spacing between number and "Followers" */
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 24px;
+      width: max-content;
+      animation: scroll-left 15s linear infinite;
+      will-change: transform;
+    }
+
+    @keyframes scroll-left {
+      0% {
+        transform: translateX(100%);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    .social-icons i {
+      color: #FFD600;
+      font-size: 1.45rem;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .social-icons i:hover {
+      color: #fffde9;
+    }
+
+    .founder-img-area {
+      flex: 0 1 308px;
+      min-width: 260px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .slider-img-container {
+      width: 265px;
+      height: 330px;
+      background: #582987;
+      border-radius: 38% 62% 66% 34% / 37% 45% 55% 63%;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 6px 28px #42177333;
+      position: relative;
+      outline: 4px solid #FFD600;
+      outline-offset: 0.55rem;
+      animation: popScale 1.2s cubic-bezier(.7, -0.2, .8, 1.6) 1;
+    }
+
+    @keyframes popScale {
+      0% {
+        transform: scale(.88);
+      }
+      70% {
+        transform: scale(1.07);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    .slider-img-container img {
+      width: 253px;
+      height: 320px;
+      border-radius: 32% 58% 62% 38% / 44% 45% 55% 56%;
+      object-fit: cover;
+      box-shadow: 0 2px 30px 3px #28005665;
+      transition: opacity 0.6s ease;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    @media (max-width: 1000px) {
+      .founder-section {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .founder-text {
+        margin-right: 0;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .founder-section {
+        padding: 30px 3vw;
+      }
+
+      .slider-img-container {
+        width: 180px;
+        height: 220px;
+      }
+
+      .slider-img-container img {
+        width: 170px;
+        height: 210px;
+      }
+    }
+  </style>
+
+
+  <script>
+    // Animate image slider
+    const imgEls = [
+      document.getElementById('founder-img1'),
+      document.getElementById('founder-img2'),
+      document.getElementById('founder-img3')
+    ];
+    let idx = 0;
+
+    setInterval(() => {
+      imgEls.forEach((el, i) => {
+        el.style.opacity = (i === idx) ? "1" : "0";
+      });
+      idx = (idx + 1) % imgEls.length;
+    }, 1000);
+
+    // Count-up animation logic
+    function countUp(elementId, target, duration = 3000) {
+      const el = document.getElementById(elementId);
+      if (!el) {
+        console.error(`Element with ID ${elementId} not found`);
+        return;
+      }
+      let start = 0;
+      let startTime = null;
+
+      function animate(timestamp) {
+        if (!startTime) startTime = timestamp;
+        const progress = timestamp - startTime;
+        const percent = Math.min(progress / duration, 1);
+        const value = start + (target - start) * percent;
+
+        el.textContent = value.toFixed(1) + ' Million';
+
+        if (progress < duration) {
+          requestAnimationFrame(animate);
+        } else {
+          el.textContent = target.toFixed(1) + ' Million';
+        }
+      }
+
+      return animate;
+    }
+
+    // Trigger animation when section is visible
+    document.addEventListener('DOMContentLoaded', () => {
+      const founderSection = document.querySelector('.founder-section');
+      if (!founderSection) {
+        console.error('Founder section not found');
+        return;
+      }
+      const observer = new IntersectionObserver(
+        (entries) => {
+          if (entries[0].isIntersecting) {
+            console.log('Founder section is visible, starting animations');
+            requestAnimationFrame(countUp('followers-count', 15.7, 4000));
+            requestAnimationFrame(countUp('followers-count-bar', 15.7, 4000));
+            observer.disconnect();
+          }
+        },
+        { threshold: 0.5 }
+      );
+
+      observer.observe(founderSection);
+    });
+  </script><section class="founder-section">
+    <div class="founder-text">
+      <h2><span>Meet</span> Our Founder</h2>
+      <p><span color="#ffd600"><b>Aditya Jain</b></span> is a dynamic innovator with a passion for making tech education accessible. As a content creator, entrepreneur, and mentor, he has built an impressive following of more than 11.7<span class="founder-highlight">&nbsp;Million</span> learners across social platforms.
+      </p>
+      <p>
+        Since 2010, he has launched multiple ventures, including TechMentor and joined hands with industry pioneers to redefine digital learning. Aditya's love for teaching inspired him to establish Next Bigg Tech, a hub for career development,
+        entrepreneurship, and practical tech skills — all presented in plain, actionable language.
+      </p>
+      <p>
+        His expert-led courses cover topics ranging from building your first startup to mastering the latest tech tools, and his approachable style helps demystify complex ideas for everyone.
+      </p>
+      <div class="social-bar"><span><span id="followers-count-bar">11.7 Million</span> Followers
+        </span>
+        <div class="social-icons" aria-label="Social Media Icons">
+          <i title="YouTube" aria-label="YouTube">🎬</i>
+          <i title="Instagram" aria-label="Instagram">📸</i>
+          <i title="LinkedIn" aria-label="LinkedIn">💼</i>
+          <i title="Spotify" aria-label="Spotify">🎵</i>
+          <i title="X (Twitter)" aria-label="X Twitter">🐦</i>
+          <i title="Telegram" aria-label="Telegram">✉️</i>
+          <!-- Duplicate for seamless scroll -->
+          <i title="YouTube" aria-label="YouTube">🎬</i>
+          <i title="Instagram" aria-label="Instagram">📸</i>
+          <i title="LinkedIn" aria-label="LinkedIn">💼</i>
+          <i title="Spotify" aria-label="Spotify">🎵</i>
+          <i title="X (Twitter)" aria-label="X Twitter">🐦</i>
+          <i title="Telegram" aria-label="Telegram">✉️</i>
+        </div>
+      </div>
+    </div>
+    <div class="founder-img-area">
+      <div class="slider-img-container">
+        <img src="https://randomuser.me/api/portraits/men/32.jpg" style="opacity: 1;" id="founder-img1" alt="Founder Arjun smiling and presenting">
+        <img src="https://randomuser.me/api/portraits/men/33.jpg" style="opacity: 0;" id="founder-img2" alt="Founder Arjun in a teaching pose">
+        <img src="/s/pages/assets/images/Kt3YI20250126143429.jpg" style="opacity: 0;" alt="Founder Arjun animated and gesturing" data-filename="20250126_143429.jpg">
+      </div>
+    </div>
+  </section>
+
+  </div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="1752851696363d" data-cat="1" class="is-section is-section-100 is-box" style="background-color: rgb(106, 27, 154);">
+	<div class="is-boxes">
+		<div class="is-box-centered">
+			<div class="is-container container" style="max-width: 1400px;">
+				<div class="row clearfix">
+					<div class="column full">
+
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trusted By Creators - Looping Testimonials</title>
+<style>
+  body {
+    background: #6A1B9A;
+    font-family: 'Inter', Arial, sans-serif;
+    margin: 0;
+    color: #fff;
+  }
+  .trusted-creators-section {
+    max-width: 1300px;
+    margin: 20px auto; /* reduced margin */
+    background: #6A1B9A;
+    border-radius: 24px;
+    box-shadow: 0 4px 40px 0 #FFD60022;
+    padding: 24px 18px 30px 18px; /* reduced padding */
+    position: relative;
+    overflow: hidden;
+    max-height: 600px; /* limit height to avoid scrolling */
+  }
+  .trusted-creators-section h2 {
+    text-align: center;
+    color: #FFD600;
+    font-size: 1.8rem; /* smaller font */
+    margin-bottom: 24px; /* less spacing below */
+    font-weight: 800;
+    letter-spacing: 0.5px;
+  }
+  .columns-animated-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 32px;
+    position: relative;
+  }
+  .column-anim {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    will-change: transform;
+  }
+  .creator-card {
+    background: rgba(255,224,102,0.12);
+    border-radius: 16px;
+    padding: 20px 16px 16px; /* reduced padding */
+    box-shadow: 0 0 12px 2px #ffd6001c;
+    border: 2px solid transparent;
+    transition: border .2s, box-shadow .2s;
+    font-size: 0.9rem; /* slightly smaller font size */
+  }
+  .creator-card:hover {
+    border: 2px solid #FFD600;
+    box-shadow: 0 0 30px 2px #ffd60044;
+  }
+  .creator-identity {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-top: 18px;
+  }
+  .creator-info {
+    display: flex;
+    flex-direction: column;
+  }
+  .creator-name {
+    color: #FFD600;
+    font-weight: 700;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+    margin-bottom: 2px;
+  }
+  .creator-handle {
+    color: #fff;
+    font-size: 0.98rem;
+    font-weight: 500;
+    opacity: .8;
+  }
+  .creator-img {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 2.5px solid #FFD600;
+    object-fit: cover;
+    background: #fff;
+    box-shadow: 0 3px 12px #ffd60051;
+  }
+  @media (max-width: 1100px) {
+    .trusted-creators-section {
+      padding: 24px 2vw;
+    }
+    .columns-animated-row {
+      gap: 17px;
+    }
+  }
+  @media (max-width: 900px) {
+    .columns-animated-row {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+</style>
+
+
+
+<section class="trusted-creators-section">
+  <h2>Trusted By Creators</h2>
+  <div class="columns-animated-row">
+
+    <!-- Column 1 -->
+    <div class="column-anim" id="col1" style="transform: translateY(-16.5px);">
+      <div class="creator-card">
+        <div>"Next Bigg Tech empowers me to expand my creativity and reach new audiences."</div>
+        <div class="creator-identity">
+          <img class="creator-img" src="https://randomuser.me/api/portraits/men/31.jpg" alt="Amit Chauhan">
+          <div class="creator-info">
+            <span class="creator-name">Amit Chauhan</span>
+            <span class="creator-handle">@amit.techie</span>
+          </div>
+        </div>
+      </div>
+      <div class="creator-card">
+        <div>"I value hands-on skills over theory, and this platform provides exactly that."</div>
+        <div class="creator-identity">
+          <img class="creator-img" src="https://randomuser.me/api/portraits/men/10.jpg" alt="Priyansh Rao">
+          <div class="creator-info">
+            <span class="creator-name">Priyansh Rao</span>
+            <span class="creator-handle">@priyansh.innovate</span>
+          </div>
+        </div>
+      </div>
+      <div class="creator-card">
+        <div>"This platform turns potential into performance with its practical content."</div>
+        <div class="creator-identity">
+          <img class="creator-img" src="https://randomuser.me/api/portraits/men/14.jpg" alt="Rahul Bedi">
+          <div class="creator-info">
+            <span class="creator-name">Rahul Bedi</span>
+            <span class="creator-handle">@rahulbedi</span>
+          </div>
+        </div>
+      </div>
+      <!-- Duplicate for infinite loop -->
+      <div class="creator-card">
+        <div>"Next Bigg Tech empowers me to expand my creativity and reach new audiences."</div>
+        <div class="creator-identity">
+          <img class="creator-img" src="https://randomuser.me/api/portraits/men/31.jpg" alt="Amit Chauhan">
+          <div class="creator-info">
+            <span class="creator-name">Amit Chauhan</span>
+            <span class="creator-handle">@amit.techie</span>
+          </div>
+        </div>
+      </div>
+      <div class="creator-card">
+        <div>"I value hands-on skills over theory, and this platform provides exactly that."</div>
+        <div class="creator-identity">
+          <img class="creator-img" src="https://randomuser.me/api/portraits/men/10.jpg" alt="Priyansh Rao">
+          <div class="creator-info">
+            <span class="creator-name">Priyansh Rao</span>
+            <span class="creator-handle">@priyansh.innovate</span>
+          </div>
+        </div>
+      </div>
+      <div class="creator-card">
+        <div>"This platform turns potential into performance with its practical content."</div>
+        <div class="creator-identity">
+          <img class="creator-img" src="https://randomuser.me/api/portraits/men/14.jpg" alt="Rahul Bedi">
+          <div class="creator-info">
+            <span class="creator-name">Rahul Bedi</span>
+            <span class="creator-handle">@rahulbedi</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Column 2 -->
+    <div class="column-anim" id="col2" style="transform: translateY(16.5px);">
+      <div class="creator-card">
+        <div>"The support and depth of knowledge here is unmatched."</div>
+        <div class="creator-identity">
+          <img class="creator-img" src="https://randomuser.me/api/portraits/women/24.jpg" alt="Shalini Kaur">
+          <div class="creator-info">
+            <span class="creator-name">Shalini Kaur</span>
+            <span class="creator-handle">@shalini.kaur</span>
+          </div>
+        </div>
+      </div>
+      <div class="creator-card">
+        <div>"The courses combine industry trends with actionable projects."</div>
+        <div class="creator-identity">
+          <img class="creator-img" src="https://randomuser.me/api/portraits/women/42.jpg" alt="Nisha Kapadia">
+          <div class="creator-info">
+            <span class="creator-name">Nisha Kapadia</span>
+            <span class="creator-handle">@nisha.create</span>
+          </div>
+        </div>
+      </div>
+      <div class="creator-card">
+        <div>"Mentorship that meets clarity. I now pursue ideas boldly."</div>
+        <div class="creator-identity">
+          <img class="creator-img" src="https://randomuser.me/api/portraits/women/18.jpg" alt="Ankita Sinha">
+          <div class="creator-info">
+            <span class="creator-name">Ankita Sinha</span>
+            <span class="creator-handle">@ankita.sinha</span>
+          </div>
+        </div>
+      </div>
+      <!-- Duplicate -->
+      <div class="creator-card">
+        <div>"The support and depth of knowledge here is unmatched."</div>
+        <div class="creator-identity">
+          <img class="creator-img" src="https://randomuser.me/api/portraits/women/24.jpg" alt="Shalini Kaur">
+          <div class="creator-info">
+            <span class="creator-name">Shalini Kaur</span>
+            <span class="creator-handle">@shalini.kaur</span>
+          </div>
+        </div>
+      </div>
+      <div class="creator-card">
+        <div>"The courses combine industry trends with actionable projects."</div>
+        <div class="creator-identity">
+          <img class="creator-img" src="https://randomuser.me/api/portraits/women/42.jpg" alt="Nisha Kapadia">
+          <div class="creator-info">
+            <span class="creator-name">Nisha Kapadia</span>
+            <span class="creator-handle">@nisha.create</span>
+          </div>
+        </div>
+      </div>
+      <div class="creator-card">
+        <div>"Mentorship that meets clarity. I now pursue ideas boldly."</div>
+        <div class="creator-identity">
+          <img class="creator-img" src="https://randomuser.me/api/portraits/women/18.jpg" alt="Ankita Sinha">
+          <div class="creator-info">
+            <span class="creator-name">Ankita Sinha</span>
+            <span class="creator-handle">@ankita.sinha</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Column 3 -->
+    <div class="column-anim" id="col3" style="transform: translateY(-16.5px);">
+      <div class="creator-card">
+        <div>"Next Bigg Tech gave me the confidence to think big and build fast."</div>
+        <div class="creator-identity">
+          <img class="creator-img" src="https://randomuser.me/api/portraits/men/13.jpg" alt="Samarjit Banerjee">
+          <div class="creator-info">
+            <span class="creator-name">Samarjit Banerjee</span>
+            <span class="creator-handle">@sam.banerjee</span>
+          </div>
+        </div>
+      </div>
+      <div class="creator-card">
+        <div>"It pushes you to take action and helps you stay on track."</div>
+        <div class="creator-identity">
+          <img class="creator-img" src="https://randomuser.me/api/portraits/women/37.jpg" alt="Tanvi Mishra">
+          <div class="creator-info">
+            <span class="creator-name">Tanvi Mishra</span>
+            <span class="creator-handle">@tanvi.codes</span>
+          </div>
+        </div>
+      </div>
+      <div class="creator-card">
+        <div>"The platform bridges the gap between learning and launching."</div>
+        <div class="creator-identity">
+          <img class="creator-img" src="https://randomuser.me/api/portraits/men/22.jpg" alt="Krishna Reddy">
+          <div class="creator-info">
+            <span class="creator-name">Krishna Reddy</span>
+            <span class="creator-handle">@krishna.reddy</span>
+          </div>
+        </div>
+      </div>
+      <!-- Duplicate -->
+      <div class="creator-card">
+        <div>"Next Bigg Tech gave me the confidence to think big and build fast."</div>
+        <div class="creator-identity">
+          <img class="creator-img" src="https://randomuser.me/api/portraits/men/13.jpg" alt="Samarjit Banerjee">
+          <div class="creator-info">
+            <span class="creator-name">Samarjit Banerjee</span>
+            <span class="creator-handle">@sam.banerjee</span>
+          </div>
+        </div>
+      </div>
+      <div class="creator-card">
+        <div>"It pushes you to take action and helps you stay on track."</div>
+        <div class="creator-identity">
+          <img class="creator-img" src="https://randomuser.me/api/portraits/women/37.jpg" alt="Tanvi Mishra">
+          <div class="creator-info">
+            <span class="creator-name">Tanvi Mishra</span>
+            <span class="creator-handle">@tanvi.codes</span>
+          </div>
+        </div>
+      </div>
+      <div class="creator-card">
+        <div>"The platform bridges the gap between learning and launching."</div>
+        <div class="creator-identity">
+          <img class="creator-img" src="https://randomuser.me/api/portraits/men/22.jpg" alt="Krishna Reddy">
+          <div class="creator-info">
+            <span class="creator-name">Krishna Reddy</span>
+            <span class="creator-handle">@krishna.reddy</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script>
+  const col1 = document.getElementById('col1');
+  const col2 = document.getElementById('col2');
+  const col3 = document.getElementById('col3');
+
+  let speed = 0.5;
+  let col1Pos = 0, col2Pos = 0, col3Pos = 0;
+
+  function scrollLoop() {
+    const height = col1.scrollHeight / 2;
+    col1Pos = (col1Pos - speed) % height;
+    col2Pos = (col2Pos + speed) % height;
+    col3Pos = (col3Pos - speed) % height;
+
+    col1.style.transform = `translateY(${col1Pos}px)`;
+    col2.style.transform = `translateY(${col2Pos}px)`;
+    col3.style.transform = `translateY(${col3Pos}px)`;
+
+    requestAnimationFrame(scrollLoop);
+  }
+
+  scrollLoop();
+</script>
+
+
+
+</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="1752857864691d" data-cat="1" class="is-section is-section-100 is-box" style="background-color: rgb(106, 27, 154);">
+	<div class="is-boxes">
+		<div class="is-box-centered">
+			<div class="is-container container" style="max-width: 1496px;">
+				<div class="row clearfix">
+					<div class="column full"><!-- Enhanced FAQ Section Start -->
+<style>
+  :root {
+    --nbt-purple: #6A1B9A;
+    --nbt-yellow: #FFD600;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    background: #6A1B9A;
+  }
+  .faq-wrapper {
+    background: #6A1B9A;
+    min-height: 100vh;
+    padding-top: 60px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+  }
+  .faq-container {
+    max-width: 1100px;       /* wider container */
+    margin: 0 auto;
+    display: flex;
+    gap: 18px;               /* smaller gap */
+    background: transparent;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding-bottom: 40px;
+  }
+  .faq-heading {
+    flex-basis: 25%;          /* narrower heading */
+    min-width: 140px;
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 1.12;
+    color: #FFD600;
+    letter-spacing: -0.5px;
+    padding-top: 10px;
+  }
+  .faq-heading span {
+    color: #fff;
+  }
+  .faq-list {
+    flex-basis: 73%;         /* wider list */
+    min-width: 260px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .faq-item {
+    background: #fff;
+    color: #292929;
+    border-radius: 11px;
+    cursor: pointer;
+    font-size: 1.09rem;
+    padding: 0;
+    border-left: 5px solid transparent;
+    box-shadow: 0 2px 16px 0px rgba(106,27,154,0.07);
+    transition: border-left .2s, box-shadow .2s;
+    margin-bottom: 0;
+    position: relative;
+    min-height: unset;        /* remove/minimize height restriction */
+  }
+  .faq-item.active {
+    border-left: 5px solid #FFD600;
+    box-shadow: 0 4px 22px 0px rgba(106,27,154,0.10);
+  }
+  .faq-question-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 30px;      /* less vertical, more horizontal padding */
+    font-size: 1rem;
+    border-radius: 11px;
+    user-select: none;
+  }
+  .faq-question-left {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+  }
+  .faq-icon {
+    font-size: 0.95rem;
+    color: #6A1B9A;
+    background: #FFD600;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .faq-plus {
+    font-size: 1rem;
+    color: #FFD600;
+    margin-left: 12px;
+    min-width: 18px;
+    transition: transform 0.2s;
+    font-weight: bold;
+  }
+  .faq-item.active .faq-plus {
+    color: #6A1B9A;
+    transform: rotate(45deg);
+  }
+  .faq-answer {
+    display: none;
+    margin: 0 18px 12px 42px;
+    color: #444;
+    font-size: 0.9rem;
+  }
+  .faq-item.active .faq-answer {
+    display: block;
+  }
+  .faq-whatsapp-btn {
+    background: var(--nbt-yellow);
+    color: #292929;
+    font-weight: 600;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    padding: 10px 26px;
+    margin-top: 14px;
+    box-shadow: 0 2px 8px rgba(255, 214, 0, 0.13);
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.18s, color 0.18s;
+  }
+  .faq-whatsapp-btn:active {
+    filter: brightness(0.97);
+  }
+  .faq-whatsapp-btn::before {
+    content: '';
+    position: absolute;
+    top: 0; left: -75%;
+    width: 55%;
+    height: 100%;
+    background: linear-gradient(120deg,
+      rgba(255,255,255,0.13) 0%,
+      #fffde7 43%,
+      rgba(255,255,255,0.8) 56%,
+      #fffde7 65%,
+      rgba(255,255,255,0.09) 100%);
+    transform: skewX(-22deg);
+    z-index: 1;
+    pointer-events: none;
+    mix-blend-mode: lighten;
+    transition: left 0.42s cubic-bezier(.66,0,1,1);
+  }
+  .faq-whatsapp-btn:hover::before,
+  .faq-whatsapp-btn:focus::before {
+    left: 120%;
+    transition: left 0.72s cubic-bezier(.66,0,1,1);
+  }
+  .faq-whatsapp-btn span {
+    position: relative;
+    z-index: 2;
+    font-weight: 600;
+    letter-spacing: -0.2px;
+    color: #222;
+  }
+  @media (max-width: 1100px) {
+    .faq-container {
+      flex-direction: column;
+      gap: 20px;
+      padding: 0 5vw 40px 5vw;
+      max-width: 98vw;
+    }
+    .faq-list {
+      flex-basis: 100%;
+    }
+  }
+  @media (max-width: 700px) {
+    .faq-heading {
+      font-size: 1.35rem;
+      min-width: 0;
+      padding-top: 0;
+    }
+    .faq-container {
+      gap: 12px;
+    }
+    .faq-question-row, .faq-answer {
+      font-size: 0.97rem;
+    }
+  }
+</style>
+
+<div class="faq-wrapper">
+  <div class="faq-container">
+    <div class="faq-heading">
+      Frequently<br>Asked <span>Questions</span>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-question-row">
+          <div class="faq-question-left">
+            <span class="faq-icon">🎫</span>
+            <h4><b>What is the refund policy?</b></h4>
+          </div>
+          <span class="faq-plus">+</span>
+        </div>
+        <div class="faq-answer">
+          We offer risk-free purchases across all courses. You can avail a full refund within 14 days of purchase, no questions asked. This is applicable across all courses and all plans.
+        </div>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-question-row">
+          <div class="faq-question-left">
+            <span class="faq-icon">📺</span>
+            <h4><b>Are the courses conducted live?</b></h4>
+          </div>
+          <span class="faq-plus">+</span>
+        </div>
+        <div class="faq-answer">
+          Information about live course conduction will be detailed here.
+        </div>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-question-row">
+          <div class="faq-question-left">
+            <span class="faq-icon">👥</span>
+            <h4><b>Do the courses have any live interaction?</b></h4>
+          </div>
+          <span class="faq-plus">+</span>
+        </div>
+        <div class="faq-answer">
+          Details on live interaction within the courses will be explained here.
+        </div>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-question-row">
+          <div class="faq-question-left">
+            <span class="faq-icon">💬</span>
+            <h4><b>Whom do I contact in case of any issues or concerns?</b></h4>
+          </div>
+          <span class="faq-plus">+</span>
+        </div>
+        <div class="faq-answer">
+          For any assistance or support, you can reach out to us directly on WhatsApp.<br>
+          <span>
+            <a class="faq-whatsapp-btn" href="https://wa.me/your-whatsapp-number-here" target="_blank" rel="noopener">
+              <span>Need Support? WhatsApp Us</span>
+            </a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function toggleFaq(elem) {
+    var items = document.querySelectorAll('.faq-item');
+    if (!elem.classList.contains('active')) {
+      items.forEach(function(item) { item.classList.remove('active'); });
+      elem.classList.add('active');
+    } else {
+      elem.classList.remove('active');
+    }
+    document.querySelectorAll('.faq-item .faq-plus').forEach(function(plus){
+      plus.textContent = '+';
+    });
+    if (elem.classList.contains('active')) {
+      elem.querySelector('.faq-plus').textContent = '-';
+    }
+  }
+</script>
+<!-- Enhanced FAQ Section End -->
+</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="1752853414715d" data-cat="1" class="is-section is-section-100 is-box" style="background-color: rgb(106, 27, 154);">
+	<div class="is-boxes">
+		<div class="is-box-centered">
+			<div class="is-container container" style="max-width: 1400px;">
+				<div class="row clearfix">
+					<div class="column full"><meta charset="UTF-8">
+  <title>Next Bigg Tech - Footer</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <style>
+    body {
+      background: #6A1B9A;
+      color: #fff;
+      font-family: 'Inter', Arial, sans-serif;
+      margin: 0;
+    }
+    .footer-section {
+      background: #6A1B9A;
+      color: #fff;
+      padding: 44px 16px 30px 16px;
+      position: relative;
+      min-height: 230px;
+      letter-spacing: 0.01em;
+    }
+    .footer-logo {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #6A1B9A;
+      letter-spacing: 1.2px;
+      margin-bottom: 4px;
+      display: inline-block;
+    }
+    .footer-logo span {
+      color: #ffd600;
+    }
+    .footer-tagline {
+      margin-top: 8px;
+      font-size: 1.04rem;
+      max-width: 480px;
+      color: #e0e4ea;
+      line-height: 1.5;
+      margin-bottom: 12px;
+    }
+    .footer-socials {
+      position: absolute;
+      right: 60px;
+      top: 52px;
+      display: flex;
+      flex-direction: column;
+      gap: 26px;
+      align-items: flex-end;
+    }
+    .footer-socials .footer-icons {
+      display: flex;
+      gap: 16px;
+    }
+    .footer-socials .footer-icons a {
+      background: #ffd600;
+      color: #171a23;
+      border-radius: 6px;
+      width: 36px;
+      height: 36px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.32rem;
+      text-decoration: none;
+      transition: background .2s;
+      box-shadow: 0 3px 7px #ffd60024;
+    }
+    .footer-socials .footer-icons a:hover {
+      background: #fff;
+      color: #6A1B9A;
+    }
+    .footer-socials .for-support {
+      margin-top: 8px;
+      font-size: 1.03rem;
+      color: #ffd600;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .footer-socials .whatsapp-icon {
+      background: #fff;
+      color: #29b858;
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.28rem;
+      margin-left: 4px;
+      box-shadow: 0 2px 6px #26d65726;
+    }
+    .footer-bottom-bar {
+      margin-top: 38px;
+      border-top: 1px solid #273659;
+      padding-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+    .footer-copyright {
+      font-size: 1.01rem;
+      color: #cfd7ea;
+      opacity: 0.8;
+    }
+    .footer-links {
+      display: flex;
+      gap: 22px;
+      font-size: 1.01rem;
+      flex-wrap: wrap;
+    }
+    .footer-links a {
+      color: #ffd600;
+      text-decoration: none;
+      opacity: 0.95;
+      transition: color .18s, opacity .16s;
+    }
+    .footer-links a:hover {
+      color: #fff;
+      opacity: 1;
+    }
+    @media (max-width: 800px) {
+      .footer-socials {
+        static: static;
+        position: static;
+        align-items: flex-start;
+        margin-top: 32px;
+      }
+      .footer-section {
+        padding: 38px 8vw 18px 8vw;
+      }
+    }
+    @media (max-width: 600px) {
+      .footer-section {
+        padding: 23px 5vw 14px 5vw;
+      }
+      .footer-bottom-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 13px;
+      }
+      .footer-socials {
+        align-items: flex-start;
+      }
+    }
+  </style>
+
+
+  <footer class="footer-section">
+   <div class="footer-logo">
+  <span style="color: #ffd600;">Next Bigg Tech</span>
+  <div style="font-size: 0.95rem; font-weight: 400; color: #ffd600; margin-top: 2px;">
+    by Aditya Jain
+  </div>
+</div>
+
+    <div class="footer-tagline">
+      Super practical courses, with a no-nonsense approach, that are designed to help you take life decisions from a point of awareness, and not ignorance.
+    </div>
+    <div class="footer-socials">
+      <div style="font-size:1.04rem;color:#eee;opacity:.82;margin-bottom:2px;">Follow us on</div>
+      <div class="footer-icons">
+        <a href="#" title="LinkedIn">🔗</a>
+        <a href="#" title="YouTube">▶️</a>
+        <a href="#" title="Instagram">📸</a>
+      </div>
+      <div class="for-support">For support
+        <span class="whatsapp-icon">💬</span>
+      </div>
+    </div>
+    <div class="footer-bottom-bar">
+      <div class="footer-copyright">© Copyright 2025</div>
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">Contact Us</a>
+        <a href="#">Refund Policy</a>
+      </div>
+    </div>
+  </footer></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!---OTHERS--->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700" rel="stylesheet">
