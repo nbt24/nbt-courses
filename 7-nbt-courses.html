@@ -1,0 +1,545 @@
+<div id="section-typing" data-cat="1" class="is-section is-box is-dark-text is-section-20" style="background-color: rgb(254, 249, 240);">
+	<div class="is-boxes">
+		<div class="is-box-centered">
+			<div class="is-container container is-content-800">
+				<div class="row clearfix">
+					<div class="column full">
+						<div class="framer-4qmke3" data-framer-name="Heading-Container">
+							<div class="framer-eoem0w" data-framer-name="Courses made for work and life" data-framer-component-type="RichTextContainer" style="outline: none; display: flex; flex-direction: column; justify-content: flex-start; flex-shrink: 0; transform: none;">
+								<h2 class="framer-text framer-styles-preset-1rxule9" data-styles-preset="yK0zVHYm5" style="text-align: center;">
+									<strong class="framer-text size-68" style="line-height: 1;">Practical Courses</strong>
+									<strong class="framer-text"><br class="framer-text"></strong>
+									<span class="framer-text typing-text" style="--framer-text-color: var(--token-5199e8ef-c1df-4127-a936-040ca2f561a1, rgb(65, 105, 225));">
+										<strong class="framer-text size-60 typing" style="line-height: 1.2; color: rgb(102, 67, 209); text-decoration: none; background-color: rgb(221, 193, 239);" id="typing-target"> Python Programming</strong>
+									</span>
+								</h2>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<style>
+		#section-typing .column.full .framer-4qmke3 .framer-eoem0w .typing-text {
+			display: inline-block !important;
+			position: relative !important;
+			z-index: 10;
+		}
+
+		#section-typing .column.full .framer-4qmke3 .framer-eoem0w .typing-text::after {
+			content: '|';
+			position: absolute;
+			right: -10px;
+			color: #6643D1;
+			animation: blink 0.7s infinite !important;
+			z-index: 11;
+		}
+
+		@keyframes blink {
+			0%, 100% { opacity: 1; }
+			50% { opacity: 0; }
+		}
+
+		#section-typing .column.full .framer-4qmke3 .framer-eoem0w .typing-text #typing-target {
+			display: inline-block !important;
+			white-space: pre;
+			overflow: hidden;
+			color: #6643D1;
+			background-color: #E6D8F2;
+			padding: 2px 8px;
+			border-radius: 4px;
+		}
+
+		#section-typing .column.full .framer-4qmke3 .framer-eoem0w .typing-text #typing-target.typing {
+			animation: typing 2s steps(20, end), pause 0.5s 2s, backspace 1s steps(20, end) 2.5s;
+			animation-iteration-count: 1 !important;
+		}
+
+		@keyframes typing {
+			from { width: 0; }
+			to { width: 100%; }
+		}
+
+		@keyframes pause {
+			from, to { width: 100%; }
+		}
+
+		@keyframes backspace {
+			from { width: 100%; }
+			to { width: 1ch; }
+		}
+	</style>
+
+	<script>
+		function initTypingAnimation() {
+			const texts = [
+				' For Work & Life',
+				' Python Programming',
+				' Java Development',
+				' C++ Mastery',
+				' AI Fundamentals',
+				' Machine Learning',
+				' Deep Learning',
+				' Web Development',
+				' React.js Front-End',
+				' Data Science',
+				' SQL Analysis'
+			];
+			let currentIndex = 0;
+			const textElement = document.querySelector('#section-typing .column.full .framer-4qmke3 .framer-eoem0w .typing-text #typing-target');
+
+			if (!textElement) {
+				console.error('Typing target element not found');
+				return;
+			}
+
+			function typeNextText() {
+				textElement.innerHTML = texts[currentIndex];
+				textElement.classList.remove('typing');
+				void textElement.offsetWidth;
+				textElement.classList.add('typing');
+				currentIndex = (currentIndex + 1) % texts.length;
+				setTimeout(typeNextText, 3500);
+			}
+
+			typeNextText();
+
+			const observer = new MutationObserver((mutations) => {
+				mutations.forEach((mutation) => {
+					if (!document.contains(textElement)) {
+						console.warn('Typing element removed from DOM, stopping animation');
+						observer.disconnect();
+					}
+				});
+			});
+
+			observer.observe(document.body, { childList: true, subtree: true });
+		}
+
+		// Run immediately and on DOMContentLoaded for Graphy preview
+		initTypingAnimation();
+		document.addEventListener('DOMContentLoaded', initTypingAnimation);
+	</script>
+</div>
+
+<div id="section-courses" data-cat="1" class="is-section is-section-100 is-box" style="background-image: linear-gradient(0deg, rgb(253, 226, 183), rgb(253, 238, 212));">
+	<div class="is-boxes">
+		<div class="is-box-centered">
+			<div class="is-container container" style="max-width: 1100px;">
+				<div class="row clearfix">
+					<div class="filter-container" style="text-align: center;">
+						<button class="filter-button" data-category="all">All Courses</button>
+						<button class="filter-button" data-category="programming">Programming</button>
+						<button class="filter-button active" data-category="ai">AI &amp; Machine Learning</button>
+						<button class="filter-button" data-category="web-dev">Web Development</button>
+						<button class="filter-button" data-category="data-science">Data Science</button>
+					</div>
+
+					<div class="cards-container">
+						<div class="card" data-category="programming">
+							<img src="/s/pages/assets/images/5K1DGcode87790471.jpg" alt="Python Programming" data-filename="code-8779047 (1).jpg">
+							<div class="card-content" style="text-align: center;">
+								<h3>Python Programming Fundamentals</h3>
+								<p style="text-align: left;">Learn Python from scratch with hands-on projects to build a strong coding foundation.</p>
+								<span><a href="#" class="card-button" style="color: rgb(245, 243, 252); background-color: #7F20B9; border-color: #130B2E;">Join Now</a></span>
+							</div>
+						</div>
+
+						<div class="card" data-category="programming">
+							<img src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=1" alt="Java Programming">
+							<div class="card-content" style="text-align: center;">
+								<h3>Java for Beginners</h3>
+								<p style="text-align: left;">Master Java programming with practical exercises for building robust applications.</p>
+								<span><a href="#" class="card-button" style="color: rgb(245, 243, 252); background-color: #7F20B9; border-color: #130B2E;">Enroll Today</a></span>
+							</div>
+						</div>
+
+						<div class="card" data-category="programming">
+							<img src="/s/pages/assets/images/piismcomputer8037837.jpg" alt="C++ Programming" data-filename="computer-8037837.jpg">
+							<div class="card-content" style="text-align: center;">
+								<h3>C++ Programming Mastery</h3>
+								<p style="text-align: left;">Learn C++ for high-performance applications with hands-on coding projects.</p>
+								<span><a href="#" class="card-button" style="color: rgb(245, 243, 252); background-color: #7F20B9; border-color: #130B2E;">Start Now</a></span>
+							</div>
+						</div>
+
+						<div class="card" data-category="programming">
+							<img src="https://images.pexels.com/photos/1181359/pexels-photo-1181359.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=1" alt="Go Programming">
+							<div class="card-content" style="text-align: center;">
+								<h3>Go Programming Basics</h3>
+								<p style="text-align: left;">Discover Go for building scalable, high-performance applications with simplicity.</p>
+								<span><a href="#" class="card-button" style="color: rgb(245, 243, 252); background-color: #7F20B9; border-color: #130B2E;">Join Now</a></span>
+							</div>
+						</div>
+
+						<div class="card" data-category="programming">
+							<img src="https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=1" alt="Rust Programming">
+							<div class="card-content" style="text-align: center;">
+								<h3>Rust for Systems</h3>
+								<p style="text-align: left;">Master Rust for safe and efficient systems programming with hands-on projects.</p>
+								<span><a href="#" class="card-button" style="color: rgb(245, 243, 252); background-color: #7F20B9; border-color: #130B2E;">Enroll Today</a></span>
+							</div>
+						</div>
+
+						<div class="card show" data-category="ai">
+							<img src="https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=1" alt="AI Fundamentals">
+							<div class="card-content" style="text-align: center;">
+								<h3>Introduction to AI</h3>
+								<p style="text-align: left;">Explore artificial intelligence concepts and applications in this bilingual course.</p>
+								<span><a href="#" class="card-button" style="color: rgb(245, 243, 252); background-color: #7F20B9; border-color: #130B2E;">Join Now</a></span>
+							</div>
+						</div>
+
+						<div class="card show" data-category="ai">
+							<img src="/s/pages/assets/images/cNc9Laigenerated8531013.jpg" alt="Machine Learning" data-filename="ai-generated-8531013.jpg">
+							<div class="card-content" style="text-align: center;">
+								<h3>Machine Learning Essentials</h3>
+								<p style="text-align: left;">Build predictive models using machine learning techniques for real-world problems.</p>
+								<span><a href="#" class="card-button" style="color: rgb(245, 243, 252); background-color: #7F20B9; border-color: #130B2E;">Enroll Today</a></span>
+							</div>
+						</div>
+
+						<div class="card show" data-category="ai">
+							<img src="https://images.pexels.com/photos/8386667/pexels-photo-8386667.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=1" alt="Deep Learning">
+							<div class="card-content" style="text-align: center;">
+								<h3>Deep Learning with TensorFlow</h3>
+								<p style="text-align: left;">Dive into neural networks and deep learning with TensorFlow for cutting-edge AI solutions.</p>
+								<span><a href="#" class="card-button" style="color: rgb(245, 243, 252); background-color: #7F20B9; border-color: #130B2E;">Start Now</a></span>
+							</div>
+						</div>
+
+						<div class="card show" data-category="ai">
+							<img src="https://images.pexels.com/photos/8386435/pexels-photo-8386435.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=1" alt="Natural Language Processing">
+							<div class="card-content" style="text-align: center;">
+								<h3>Natural Language Processing</h3>
+								<p style="text-align: left;">Learn NLP techniques to process and analyze text data for AI applications.</p>
+								<span><a href="#" class="card-button" style="color: rgb(245, 243, 252); background-color: #7F20B9; border-color: #130B2E;">Join Now</a></span>
+							</div>
+						</div>
+
+						<div class="card" data-category="web-dev">
+							<img src="/s/pages/assets/images/braUNaigenerated8779205.png" alt="Web Development" data-filename="ai-generated-8779205.png">
+							<div class="card-content" style="text-align: center;">
+								<h3>Full-Stack Web Development</h3>
+								<p style="text-align: left;">Create modern websites with HTML, CSS, JavaScript, and Node.js in this comprehensive course.</p>
+								<span><a href="#" class="card-button" style="color: rgb(245, 243, 252); background-color: #7F20B9; border-color: #130B2E;">Join Now</a></span>
+							</div>
+						</div>
+
+						<div class="card" data-category="web-dev">
+							<img src="https://images.pexels.com/photos/5077039/pexels-photo-5077039.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=1" alt="React Development">
+							<div class="card-content" style="text-align: center;">
+								<h3>React.js for Front-End</h3>
+								<p style="text-align: left;">Develop dynamic user interfaces with React.js, focusing on reusable components.</p>
+								<span><a href="#" class="card-button" style="color: rgb(245, 243, 252); background-color: #7F20B9; border-color: #130B2E;">Enroll Today</a></span>
+							</div>
+						</div>
+
+						<div class="card" data-category="web-dev">
+							<img src="https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=1" alt="Vue.js Essentials">
+							<div class="card-content" style="text-align: center;">
+								<h3>Vue.js Essentials</h3>
+								<p style="text-align: left;">Build interactive web applications with Vue.js, focusing on modern front-end development.</p>
+								<span><a href="#" class="card-button" style="color: rgb(245, 243, 252); background-color: #7F20B9; border-color: #130B2E;">Start Now</a></span>
+							</div>
+						</div>
+
+						<div class="card" data-category="data-science">
+							<img src="/s/pages/assets/images/Z858lball635271280.jpg" alt="Data Science" data-filename="ball-63527_1280.jpg">
+							<div class="card-content" style="text-align: center;">
+								<h3>Data Science with Python</h3>
+								<p style="text-align: left;">Analyze data and create visualizations using Python libraries like Pandas and Matplotlib.</p>
+								<span><a href="#" class="card-button" style="color: rgb(245, 243, 252); background-color: #7F20B9; border-color: #130B2E;">Join Now</a></span>
+							</div>
+						</div>
+
+						<div class="card" data-category="data-science">
+							<img src="https://images.pexels.com/photos/590016/pexels-photo-590016.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=1" alt="SQL for Data">
+							<div class="card-content" style="text-align: center;">
+								<h3>SQL for Data Analysis</h3>
+								<p style="text-align: left;">Master SQL queries to manage and analyze large datasets efficiently.</p>
+								<span><a href="#" class="card-button" style="color: rgb(245, 243, 252); background-color: #7F20B9; border-color: #130B2E;">Enroll Today</a></span>
+							</div>
+						</div>
+
+						<div class="card" data-category="data-science">
+							<img src="https://images.pexels.com/photos/159888/pexels-photo-159888.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=1" alt="Big Data with Hadoop">
+							<div class="card-content" style="text-align: center;">
+								<h3>Big Data with Hadoop</h3>
+								<p style="text-align: left;">Learn Hadoop for processing and analyzing massive datasets in distributed systems.</p>
+								<span><a href="#" class="card-button" style="color: rgb(245, 243, 252); background-color: #7F20B9; border-color: #130B2E;">Start Now</a></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<style>
+		#section-courses .filter-container {
+			display: flex !important;
+			justify-content: center;
+			flex-wrap: wrap;
+			margin-bottom: 20px;
+			z-index: 10;
+		}
+
+		#section-courses .filter-button {
+			background-color: #6B46C1 !important;
+			color: #fff !important;
+			border: none !important;
+			padding: 10px 20px;
+			margin: 5px;
+			border-radius: 5px;
+			cursor: pointer;
+			font-size: 16px;
+			text-transform: uppercase;
+			transition: background-color 0.3s ease;
+			z-index: 11;
+		}
+
+		#section-courses .filter-button:hover {
+			background-color: #F7D795 !important;
+			color: #6B46C1 !important;
+		}
+
+		#section-courses .filter-button.active {
+			background-color: #553C9A !important;
+			color: #fff !important;
+		}
+
+		#section-courses .cards-container {
+			display: grid !important;
+			grid-template-columns: repeat(3, 1fr) !important;
+			gap: 20px;
+			max-width: 1200px;
+			margin: 0 auto;
+			z-index: 10;
+		}
+
+		@media (max-width: 900px) {
+			#section-courses .cards-container {
+				grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+			}
+		}
+
+		#section-courses .card {
+			background-color: #fff !important;
+			border-radius: 10px;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+			overflow: hidden;
+			transition: transform 0.3s ease, box-shadow 0.3s ease;
+			display: none !important;
+			z-index: 10;
+		}
+
+		#section-courses .card.show {
+			display: block !important;
+		}
+
+		#section-courses .card:hover {
+			transform: translateY(-10px);
+			box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+		}
+
+		#section-courses .card img {
+			width: 100%;
+			height: 200px;
+			object-fit: cover;
+		}
+
+		#section-courses .card-content {
+			padding: 20px;
+		}
+
+		#section-courses .card-content h3 {
+			margin: 0 0 10px;
+			font-size: 20px;
+			color: #2D3748;
+		}
+
+		#section-courses .card-content p {
+			font-size: 16px;
+			color: #4A5568;
+			line-height: 1.6;
+			margin-bottom: 20px;
+		}
+
+		#section-courses .card-button {
+			display: inline-block;
+			text-decoration: none;
+			border-radius: 5px;
+			padding: 10px 20px;
+			font-size: 14px;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+			font-weight: 500;
+			transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+			z-index: 11;
+		}
+
+		#section-courses .card-button:hover {
+			background-color: #F7D795 !important;
+			color: #6B46C1 !important;
+			border-color: #F7D795 !important;
+		}
+	</style>
+
+	<script>
+		function initCourseFilter() {
+			const filterButtons = document.querySelectorAll('#section-courses .filter-button');
+			const cards = document.querySelectorAll('#section-courses .card');
+
+			if (!filterButtons.length || !cards.length) {
+				console.error('Filter buttons or cards not found');
+				return;
+			}
+
+			filterButtons.forEach(button => {
+				button.addEventListener('click', () => {
+					filterButtons.forEach(btn => btn.classList.remove('active'));
+					button.classList.add('active');
+
+					const category = button.getAttribute('data-category');
+
+					cards.forEach(card => {
+						if (category === 'all' || card.getAttribute('data-category') === category) {
+							card.classList.add('show');
+						} else {
+							card.classList.remove('show');
+						}
+					});
+				});
+			});
+
+			const observer = new MutationObserver((mutations) => {
+				mutations.forEach((mutation) => {
+					if (!document.contains(document.querySelector('#section-courses .cards-container'))) {
+						console.warn('Cards container removed from DOM');
+						observer.disconnect();
+					}
+				});
+			});
+
+			observer.observe(document.body, { childList: true, subtree: true });
+		}
+
+		// Run immediately and on DOMContentLoaded for Graphy preview
+		initCourseFilter();
+		document.addEventListener('DOMContentLoaded', initCourseFilter);
+	</script>
+</div>
+
+<!---FOOTER--->
+<div id="section-footer" data-cat="117" class="is-section is-box is-section-50 is-static is-light-text" style="background-color: rgb(0, 0, 0);">
+	<div class="is-boxes">
+		<div class="is-box-centered">
+			<div class="is-container container" style="max-width: 1767px;">
+				<div class="row clearfix">
+					<div class="column third">
+						<h3 class="size-18 is-title-lite">COMPANY NAME</h3>
+						<p style="border-bottom: 2px solid #e67e22; width: 40px; display: inline-block; margin-top: 0"></p>
+						<p class="size-16">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+					</div>
+					<div class="column third">
+						<h3 class="size-18 is-title-lite">ADDRESS</h3>
+						<p style="border-bottom: 2px solid #e67e22; width: 40px; display: inline-block; margin-top: 0"></p>
+						<p class="size-16">
+							12345 Street Name, City. State 12345<br>
+							P: (123) 456 7890 / 456 7891
+						</p>
+					</div>
+					<div class="column third">
+						<h3 class="size-18 is-title-lite">FOLLOW US</h3>
+						<p style="border-bottom: 2px solid #e67e22; width: 40px; display: inline-block; margin-top: 0"></p>
+						<div class="is-social" style="margin: 25px 0">
+							<a href="https://twitter.com/"><i class="icon ion-social-twitter"></i></a>
+							<a href="https://www.facebook.com/"><i class="icon ion-social-facebook"></i></a>
+							<a href="https://plus.google.com/"><i class="icon ion-social-googleplus"></i></a>
+							<a href="mailto:you@example.com"><i class="icon ion-android-drafts"></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="row clearfix"><div class="column full"><div class="spacer height-40"></div></div></div>
+				<div class="row clearfix">
+					<div class="column full center">
+						<div class="carousel-container">
+							<div class="carousel">
+								<div class="carousel-item"><img src="assets/minimalist-blocks/images/sitepro.png" alt="SitePro Partner"></div>
+								<div class="carousel-item"><img src="assets/minimalist-blocks/images/steady.png" alt="Steady Partner"></div>
+								<div class="carousel-item"><img src="assets/minimalist-blocks/images/creative.png" alt="Creative Partner"></div>
+								<div class="carousel-item"><img src="assets/minimalist-blocks/images/light-studio.png" alt="Light Studio Partner"></div>
+								<div class="carousel-item"><img src="assets/minimalist-blocks/images/infinitech.png" alt="Infinitech Partner"></div>
+								<div class="carousel-item"><img src="assets/minimalist-blocks/images/sitepro.png" alt="SitePro Partner"></div>
+								<div class="carousel-item"><img src="assets/minimalist-blocks/images/steady.png" alt="Steady Partner"></div>
+								<div class="carousel-item"><img src="assets/minimalist-blocks/images/creative.png" alt="Creative Partner"></div>
+								<div class="carousel-item"><img src="assets/minimalist-blocks/images/light-studio.png" alt="Light Studio Partner"></div>
+								<div class="carousel-item"><img src="assets/minimalist-blocks/images/infinitech.png" alt="Infinitech Partner"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row clearfix"><div class="column full"><div class="spacer height-40"></div></div></div>
+				<div class="row clearfix">
+					<div class="column full">
+						<p class="size-14" style="text-align: center;">© Copyright 2018 Company Name</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<style>
+		#section-footer .carousel-container {
+			max-width: 1200px;
+			margin: 0 auto;
+			overflow: hidden;
+			padding: 20px 0;
+			z-index: 10;
+		}
+
+		#section-footer .carousel {
+			display: flex !important;
+			animation: slide 20s linear infinite;
+		}
+
+		#section-footer .carousel-item {
+			flex: 0 0 18%;
+			margin: 0 10px;
+		}
+
+		#section-footer .carousel-item img {
+			width: 100%;
+			height: 100px;
+			object-fit: contain;
+			display: block !important;
+			background-color: #fff;
+			padding: 10px;
+			border-radius: 5px;
+			filter: brightness(50%);
+			transition: transform 0.3s ease, filter 0.3s ease;
+		}
+
+		#section-footer .carousel-item img:hover {
+			transform: scale(1.1);
+			filter: brightness(100%) contrast(1.1);
+		}
+
+		@keyframes slide {
+			0% { transform: translateX(0); }
+			100% { transform: translateX(-50%); }
+		}
+
+		#section-footer .carousel:hover {
+			animation-play-state: paused;
+		}
+	</style>
+
+	<script>
+		// No JavaScript needed for simple infinite carousel
+	</script>
+</div>
+
