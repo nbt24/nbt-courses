@@ -1,0 +1,135 @@
+<!---OTHERS--->
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Your Learning Platform</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&amp;display=swap"><style>
+    :root {
+      --primary: #4b0081;
+      --accent: #fdb727;
+      --bg: #fff;
+      --text: #333;
+      --light: #666;
+    }
+    body { margin:0; font-family: 'Inter', sans-serif; color: var(--text); background: var(--bg); }
+    header { background: var(--primary); color:#fff; padding:20px 40px; display:flex; align-items:center; justify-content:space-between; position:sticky; top:0; z-index:100; }
+    header nav a { color: #fff; margin-left: 24px; text-decoration:none; font-weight:600; }
+    header nav a:hover { color: var(--accent); }
+    .hero { padding:120px 20px; background: var(--primary); color:#fff; text-align:center; }
+    .hero h1 { font-size:3rem; font-weight:800; margin-bottom:16px; }
+    .hero p { font-size:1.2rem; max-width:700px; margin:auto; color: #ddd; }
+    .hero .cta { margin-top:24px; }
+    .hero .cta a { padding:14px 28px; margin:0 8px; border-radius:6px; font-weight:600; text-decoration:none; display:inline-block; }
+    .hero .cta .btn-primary { background: var(--accent); color:#4b0081; }
+    .hero .cta .btn-secondary { background: transparent; border:2px solid #fff; color:#fff; }
+    .section { padding:80px 20px; max-width:1100px; margin:auto; }
+    .section h2 { text-align:center; font-size:2.5rem; margin-bottom:40px; color: var(--primary); }
+    .courses-row { display: flex; overflow-x: auto; gap:20px; padding-bottom:10px; }
+    .course-card { min-width:280px; background:#fff; border-radius:12px; box-shadow:0 5px 15px rgba(0,0,0,0.1); padding:24px; flex-shrink:0; transition:transform .3s; }
+    .course-card:hover { transform: translateY(-5px); }
+    .course-card img { width:100%; border-radius:8px; margin-bottom:16px; }
+    .course-card h3 { margin-bottom:12px; color: var(--primary); }
+    .founder { display:flex; gap:40px; align-items:center; flex-wrap:wrap; }
+    .founder img { max-width:300px; border-radius:12px; }
+    .founder div { max-width:600px; }
+    .testimonial-slider { position:relative; width:100%; max-width:800px; margin:auto; overflow:hidden; }
+    .testimonial-slider .slides { display:flex; transition: transform .5s ease; }
+    .testimonial { flex:0 0 100%; padding:40px; box-sizing:border-box; text-align:center; }
+    .faq { margin:auto; max-width:800px; }
+    .faq dt { font-weight:600; margin-top:20px; cursor:pointer; }
+    .faq dd { margin:8px 0 20px; color: var(--light); display:none; }
+    .faq dt.open + dd { display:block; }
+    .contact-form input, .contact-form textarea { width:100%; padding:14px; margin-top:12px; border:1px solid #ccc; border-radius:8px; }
+    .contact-form button { margin-top:20px; padding:14px 28px; background: var(--accent); color:#4b0081; font-weight:600; border:none; border-radius:8px; cursor:pointer; }
+    footer { background:var(--primary); color:#fff; text-align:center; padding:40px 20px; }
+    footer a { color:#fff; margin:0 8px; text-decoration:none; }
+  </style><header>
+  <div class="logo"><h2>YourBrand</h2></div>
+  <nav>
+    <a href="#courses">Courses</a><a href="#about">About</a><a href="#faq">FAQ</a><a href="#contact">Contact</a>
+  </nav>
+</header><section class="hero">
+  <h1>Learn Practical Skills for Career &amp; Life Growth</h1>
+  <p>Action‑driven courses made to help you move forward with clarity and confidence.</p>
+  <div class="cta">
+    <a href="#courses" class="btn-primary">View Courses</a>
+    <a href="#contact" class="btn-secondary">Get in Touch</a>
+  </div>
+</section><section id="courses" class="section">
+  <h2>Popular Courses</h2>
+  <div class="courses-row">
+    <div class="course-card">
+      <img src="https://via.placeholder.com/300x180" alt="">
+      <h3>Course One (Placeholder)</h3>
+      <p>Short course description goes here.</p>
+    </div>
+    <div class="course-card">
+      <img src="https://via.placeholder.com/300x180" alt="">
+      <h3>Course Two (Placeholder)</h3>
+      <p>Short course description goes here.</p>
+    </div>
+    <div class="course-card">
+      <img src="https://via.placeholder.com/300x180" alt="">
+      <h3>Course Three (Placeholder)</h3>
+      <p>Short course description goes here.</p>
+    </div>
+    <!-- add more cards -->
+  </div>
+</section><section id="about" class="section">
+  <h2>Meet Our Founder</h2>
+  <div class="founder">
+    <img src="https://via.placeholder.com/300x300" alt="Founder">
+    <div>
+      <h3>Founder Name Here</h3>
+      <p>Founder bio with professional background and mission statement. Educator, creator, trusted by thousands.</p>
+    </div>
+  </div>
+</section><section id="testimonials" class="section">
+  <h2>What Learners Say</h2>
+  <div class="testimonial-slider">
+    <div class="slides" style="transform: translateX(0%);">
+      <div class="testimonial">
+        <p><em>"This course changed how I think and execute."</em></p><strong>– Learner Name</strong>
+      </div>
+      <div class="testimonial">
+        <p><em>"Super practical and no‑fluff learning experience."</em></p><strong>– Another Learner</strong>
+      </div>
+    </div>
+  </div>
+</section><section id="faq" class="section">
+  <h2>Frequently Asked Questions</h2>
+  <dl class="faq">
+    <dt>What is this platform about?</dt>
+    <dd>This is a placeholder answer describing your mission and value.</dd>
+    <dt>Do courses include live sessions?</dt>
+    <dd>Placeholder answer about live calls and content format.</dd>
+  </dl>
+</section><section id="contact" class="section">
+  <h2>Contact Us</h2>
+  <form class="contact-form">
+    <input type="text" placeholder="Your Name" required="">
+    <input type="email" placeholder="Your Email or WhatsApp" required="">
+    <textarea rows="5" placeholder="Your Message"></textarea>
+    <button type="submit">Send Message via WhatsApp</button>
+  </form>
+</section><footer>
+  <p>© 2025 YourBrand. Practical learning for purpose-driven individuals.</p>
+  <div class="social">
+    <a href="#">Facebook</a>|<a href="#">Instagram</a>|<a href="#">LinkedIn</a>
+  </div>
+</footer><script>
+  // FAQ toggle
+  document.querySelectorAll('.faq dt').forEach(dt=>{
+    dt.addEventListener('click', () => {
+      dt.classList.toggle('open');
+    });
+  });
+  // Simple slider
+  let idx = 0;
+  const slides = document.querySelector('.slides');
+  setInterval(() => {
+    idx = (idx + 1) % 2;
+    slides.style.transform = `translateX(-${idx * 100}%)`;
+  }, 5000);
+  // Contact form placeholder action
+  document.querySelector('.contact-form').addEventListener('submit', e => {
+    e.preventDefault();
+    alert('Replace this with a WhatsApp API integration or contact workflow.');
+  });
+</script><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800">
