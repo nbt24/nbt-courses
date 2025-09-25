@@ -1,0 +1,256 @@
+<!---OTHERS--->
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Next Bigg Tech | Learn Data Science &amp; Analytics</title><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&amp;display=swap" rel="stylesheet"><style>
+    :root {
+      --primary: #4b0081;
+      --accent: #fdb727;
+      --bg: #f9f9fb;
+      --text-dark: #1f1f1f;
+      --text-light: #6b6b6b;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      color: var(--text-dark);
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background: var(--primary);
+      color: white;
+      padding: 20px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 30px;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    .hero {
+      background: linear-gradient(to right, var(--primary), #32005e);
+      color: white;
+      padding: 120px 30px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      margin-bottom: 20px;
+      font-weight: 800;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      color: #e4d9f5;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .section {
+      padding: 80px 30px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 50px;
+      color: var(--primary);
+      font-weight: 700;
+    }
+
+    .courses {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+    }
+
+    .course-card {
+      background: white;
+      border-radius: 16px;
+      padding: 30px;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+      transition: all 0.3s ease;
+      border: 3px solid transparent;
+    }
+
+    .course-card:hover {
+      transform: translateY(-10px);
+      border-color: var(--accent);
+    }
+
+    .course-card h3 {
+      color: var(--primary);
+      margin-bottom: 15px;
+    }
+
+    .about, .contact {
+      background: white;
+      border-radius: 16px;
+      padding: 40px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    }
+
+    .testimonials {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .testimonial {
+      flex: 1 1 350px;
+      background: #fff5e1;
+      border-left: 6px solid var(--accent);
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 5px 16px rgba(0,0,0,0.05);
+    }
+
+    .testimonial p {
+      font-style: italic;
+    }
+
+    input, textarea {
+      width: 100%;
+      margin-top: 15px;
+      padding: 14px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    .contact button {
+      margin-top: 20px;
+      padding: 14px 28px;
+      background: var(--accent);
+      color: #fff;
+      font-weight: 600;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .contact button:hover {
+      background: #e4a400;
+    }
+
+    footer {
+      background: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 25px 10px;
+      margin-top: 40px;
+      font-weight: 500;
+    }
+
+    #scrollTopBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: var(--accent);
+      color: white;
+      padding: 12px 18px;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      font-size: 18px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    }
+
+    @media (max-width: 700px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+      nav a {
+        margin-left: 15px;
+        font-size: 0.9rem;
+      }
+    }
+  </style><header>
+    <h2>Next Bigg Tech</h2>
+    <nav>
+      <a href="#courses">Courses</a>
+      <a href="#about">About</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header><section class="hero">
+    <h1>Upskill with Next Bigg Tech</h1>
+    <p>Master Python, SQL, Power BI &amp; More. Learn from real-world case studies, guided by industry experts.</p>
+  </section><section id="courses" class="section">
+    <h2>Our Bestselling Courses</h2>
+    <div class="courses">
+      <div class="course-card">
+        <h3>Python Zero to Hero</h3>
+        <p>Build real-world projects and gain hands-on programming skills.</p>
+      </div>
+      <div class="course-card">
+        <h3>SQL for Data Analysts</h3>
+        <p>Write powerful queries and analyze business data efficiently.</p>
+      </div>
+      <div class="course-card">
+        <h3>Power BI Visualization</h3>
+        <p>Create dashboards that deliver insights and impress stakeholders.</p>
+      </div>
+    </div>
+  </section><section id="about" class="section">
+    <h2>About Us</h2>
+    <div class="about">
+      <p>We are a tech-driven edtech company on a mission to empower the next generation of data professionals. Our platform delivers short, impactful, and affordable upskilling programs built with industry needs in mind. Trusted by 2000+ learners, our courses have led to job offers from top companies.</p>
+    </div>
+  </section><section id="testimonials" class="section">
+    <h2>What Learners Say</h2>
+    <div class="testimonials">
+      <div class="testimonial">
+        <p>"Absolutely the best Python course out there. Real use-cases made all the difference."</p>
+        <strong>- Anjali, Data Analyst @ Zoho</strong>
+      </div>
+      <div class="testimonial">
+        <p>"The SQL bootcamp helped me get an internship at Swiggy. Super practical!"</p>
+        <strong>- Nikhil, Intern @ Swiggy</strong>
+      </div>
+    </div>
+  </section><section id="contact" class="section">
+    <h2>Contact Us</h2>
+    <div class="contact">
+      <form>
+        <input type="text" placeholder="Your Name" required="">
+        <input type="email" placeholder="Your Email" required="">
+        <textarea rows="5" placeholder="Your Message"></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section><footer>
+    <p>© 2025 Next Bigg Tech. Designed for future-ready learners.</p>
+  </footer><button id="scrollTopBtn" onclick="scrollToTop()">⇧</button><script>
+    const scrollTopBtn = document.getElementById('scrollTopBtn');
+    window.onscroll = function () {
+      scrollTopBtn.style.display = window.scrollY > 300 ? 'block' : 'none';
+    };
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800" rel="stylesheet">
